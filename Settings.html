@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title> PsychWiki - Settings </title>
+          <meta charset="utf-8"> <!-- THE METEVERSE -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="color-scheme" content="dark"> <!-- Epic dark theme --> 
+          <link rel="icon" href="Lua API Pages/src/images/Psych.png"> <!-- The Favicon -->
+          <link rel="stylesheet" href="Lua API Pages/src/css/Format.css">   <!-- The Main Wiki Format -->
+          <link rel="stylesheet" href="Lua API Pages/src/css/Setting.css">  <!-- The Menu Format -->
+          <link rel="stylesheet" href="Lua API Pages/src/css/Code Format.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script defer src="Lua API Pages/src/javascript/Setting.js"></script>
+     </head>
+     <main>
+          <body>
+               <button class="icon-bgBack" onclick="history.back()">
+                    <div class="icon fa" style="position: relative; right: 0.05cm;">&#xf0d9;</div>
+               </button>
+               <section>
+                    <div class="setting">
+                         <button class="icon-bg">
+                              <div class="icon fa" style="left: 0.55cm;">&#xf186;</div>
+                         </button>
+                         <div class="description">
+                              <p class="sup-desc"> Dark/Light Mode </p>
+                              <p class="sub-desc"> Changes the website color theme </p>
+                         </div>
+                    </div>
+                    <div class="setting" style="top: 7.3cm; height: 10cm;">
+                         <button class="icon-bg">
+                              <div class="icon fa">&#xf121;</div>
+                         </button>
+                         <div class="description">
+                              <p class="sup-desc"> Color Code Theme </p>
+                              <p class="sub-desc" style="left: 1px;"> Changes the code color theme </p>
+                         </div>
+                         <div class="line-hr"></div>
+                         <p class="code-title"> Github Dark High Contrast </p>
+                         <div class="code">
+<pre style="color: white;">
+<span id="code-keyword1">function</span> <span id="code-function">mySplit</span>(<span id="code-parameter">inputstr</span>, <span id="code-parameter">sep</span>)
+     <span id="code-keyword1">local</span> <span id="code-variable">t</span> <span id="code-keyword1">=</span> {}
+     <span id="code-keyword1">if</span> <span id="code-variable">sep</span> <span id="code-keyword1">==</span> <span id="code-keyword2">nil</span> <span id="code-keyword1">then</span>
+          <span id="code-variable">sep</span> <span id="code-keyword1">=</span> <span id="code-string">"%s"</span>
+     <span id="code-keyword1">end</span>
+
+     <span id="code-keyword1">for</span> <span id="code-variable">str</span> <span id="code-keyword1">in</span> <span id="code-valmani">string</span>.<span id="code-customfunc">gmatch</span>(<span id="code-parameter">inputstr</span>, <span id="code-string">"([^"</span><span id="code-keyword1">..</span><span id="code-parameter">sep</span><span id="code-keyword1">..</span><span id="code-string">"]+)"</span>) <span id="code-keyword1">do</span>
+          <span id="code-valmani">table</span>.<span id="code-customfunc">insert</span>(<span id="code-variable">t</span>, <span id="code-variable">str</span>)
+     <span id="code-keyword1">end</span>
+     <span id="code-keyword1">return</span> <span id="code-variable">t</span>
+<span id="code-keyword1">end</span>
+</pre>
+                         </div>
+                    </div>
+               </section>
+          </body>
+     </main>
+</html>

@@ -1,0 +1,83 @@
+main.wiki {
+     line-height: 1.5;
+     margin-top: 50px;
+     position: absolute;
+     left: 2.8cm;
+}
+
+body {
+     background-color: black;
+     font-family: BlinkMacSystemFont;
+}
+
+html { scroll-behavior: smooth; }
+
+main.wiki h3 { margin-bottom: -1px; }
+main.wiki h1 { 
+     font-size: 35px; 
+     font-weight: 600;
+     margin-bottom: 30px; margin-top: 10px; 
+}
+
+main.wiki blockquote { position: relative; right: 20px;}
+main.wiki a { color: #71b8ff; text-decoration: none; }
+main.wiki a:hover { text-decoration-line: underline; }
+
+main.wiki p, main.wiki li, main.wiki blockquote { width: 22.5cm; }
+main.wiki details { margin-bottom: 20px; }
+
+main.wiki ul { line-height: 27px; }
+main.wiki code {
+     font-family: Menlo; /* Strange it didn't change color, but ok */
+     font-size: 0.345cm;
+     background-color: #464b53; /* #525964 */
+     background-size: 10px 10px;
+     border: #464b53 solid 10px;
+     border-radius: 5.5px;
+     border-width: thin 3px;
+     padding: 2.5px;
+}
+
+/* Horizontals */
+
+:root {
+     --Lblue: #71b7ff;
+     --Lgreen: #7dff71;
+     --Lyellow: #faff71;
+     --Lgold: #f0b72f;
+}
+
+main.wiki .fake-horizontal-blue { border-left: 5px solid var(--Lblue); }
+main.wiki .fake-horizontal-green { border-left: 5px solid var(--Lgreen); }
+main.wiki .fake-horizontal-yellow { border-left: 5px solid var(--Lyellow); }
+main.wiki .fake-horizontal-gold { border-left: 5px solid var(--Lgold); }
+
+main.wiki .blue { color: var(--Lblue); }
+main.wiki .green { color: var(--Lgreen); }
+main.wiki .yellow { color: var(--Lyellow); }
+main.wiki .gold { color: var(--Lgold); }
+
+
+/* Lines */
+
+.fake-hr-thick { /* For borders thick */
+     background-color: white;
+     opacity: 0.55;
+     height: 4px; width: 24cm;
+} 
+
+.fake-hr-thin1 { /* For borders thin */
+     background-color: white;
+     opacity: 0.55;	  
+     position: relative; 
+     top: 5px;
+     height: 1px; width: 24cm;
+}
+
+.fake-hr-thin2 { /* For borders thin but longer */
+     background-color: white;	
+     opacity: 0.55;
+     position: relative; 
+     bottom: 10px;
+     height: 1px; width: 1223.5px;
+}

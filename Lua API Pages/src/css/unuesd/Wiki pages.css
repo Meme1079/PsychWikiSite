@@ -1,0 +1,122 @@
+.fake-hr-thick { /* For borders thick */
+     clear: both;
+     color: white;
+     background-color: white;
+     height: 4px; width: 24cm;
+     opacity: 0.55;
+} 
+
+.fake-hr-thin1 { /* For borders thin */
+     clear: both;
+     color: white;
+     background-color: white;
+     opacity: 0.55;	  
+     position: relative; 
+     top: 5px;
+     height: 1px; width: 24cm;
+}
+
+.fake-hr-thin2 { /* For borders thin but longer */
+     clear: both;
+     color: white;
+     background-color: white;	
+     opacity: 0.55;
+     position: relative; 
+     bottom: 10px;
+     height: 1px; width: 1223.5px;
+}
+
+:root {
+     --Lblue: #71b7ff;
+     --Lgreen: #7dff71;
+     --Lyellow: #faff71;
+     --Lgold: #f0b72f;
+}
+
+.fake-horizontal-blue { border-left: 5px solid var(--Lblue); }
+.fake-horizontal-green { border-left: 5px solid var(--Lgreen); }
+.fake-horizontal-yellow { border-left: 5px solid var(--Lyellow); }
+.fake-horizontal-gold { border-left: 5px solid var(--Lgold); }
+
+.blue { color: var(--Lblue); }
+.green { color: var(--Lgreen); }
+.yellow { color: var(--Lyellow); }
+.gold { color: var(--Lgold); }
+
+
+main { /* every bodies that were never found */
+     color: white;
+     position: absolute;
+     left: 105px;
+} 
+
+code {
+     font-family: Menlo; /* Strange it didn't change color, but ok */
+     font-size: 0.35cm;
+     background-color: #525964;
+     background-size: 10px 10px;
+     border: #525964 solid 10px;
+     border-radius: 5.5px;
+     border-width: thin 3px;
+     padding: 2.5px;
+}
+
+html { line-height: 1.5; font-family: BlinkMacSystemFont; }
+ul { line-height: 1.8; }
+h3 { margin-bottom: 10px; }
+blockquote { position: relative; right: 20px; }
+p, li, blockquote { width: 23cm; }
+a { color: #71b8ff; text-decoration: none; }
+
+a:hover { text-decoration-line: underline; }
+ins:hover { 
+     background-color: yellow; 
+     color: black; 
+     text-decoration-line: none; 
+}
+
+/* Unused lol */
+
+.bord-warn { /* For warning border */
+     width: 23.86cm; height: 82px;
+     outline: rgb(247, 190, 2) solid 1px;
+     background-color: rgb(107, 75, 21);;
+     background-size: 10px 10px;
+     border-radius: 5.5px;
+     border-width: thin;
+     padding: 2.5px;   
+}
+
+.warn { /* For warning text pos */
+     color: rgb(247, 166, 2); 
+     position: absolute;
+     top: 10px; left: 20px;
+}
+
+.warn-sign-pos { /* For warning icon pos */
+     color: rgb(247, 166, 2);
+     position: relative; 
+     top: 10px; 
+}
+
+.bord-note { /* For note border */
+     width: 23.86cm; height: 95px;
+     outline: rgb(0, 145, 255) solid 1px;
+     background-color: rgb(0, 66, 116);
+     background-size: 10px 10px;
+     border-radius: 5.5px;
+     border-width: thin;
+     padding: 2.5px;   
+}
+
+.note { /* For note text pos */
+     color: rgb(0, 145, 255); 
+     position: absolute;
+     top: 10px; left: 20px;
+}
+
+.note-sign-pos { /* For note icon pos */
+     color: rgb(0, 145, 255);
+     position: relative; 
+     top: 10px; 
+} 

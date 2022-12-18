@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title> PsychWiki - General Functions </title>
+          <meta charset="utf-8"> <!-- THE METEVERSE -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="color-scheme" content="dark">           <!-- Epic dark theme --> 
+          <link rel="icon" href="src/images/Psych.png">       <!-- The Favicon -->
+          <link rel="stylesheet" href="src/css/Format.css">   <!-- The Main Wiki Format -->
+          <link rel="stylesheet" href="src/css/Code Format.css">
+          <link rel="stylesheet" href="src/css/Menu.css">     <!-- The Menu Format -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script defer src="src/javascript/Main Code.js"></script>  <!-- Main Code duh -->
+          <script defer src="src/javascript/Resize.js"></script>     <!-- Resize Support -->
+     </head>
+     <body>
+          <nav class="menu_bg">                    
+               <p class="menu_title"> PsychWiki </p>
+               <img class="menu_image" src="src/images/Psych.png" width="60" height="60">
+
+               <input type="checkBox" id="check">
+               <label for="check" class="checkbtn">
+                    <div class="fa fa-ellipsis-h"></div>
+               </label>
+          
+               <ul class="menu_lists">
+                    <li class="menu_button"><a class="menu_links" href="../index.html"> Home <div class="fa fa-home"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="../Settings.html"> Settings <div class="fa fa-cog"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="#"> Credits <div class="fa fa-bars"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="#"> Github <div class="fa fa-github"></div></a></li>
+                    <div class="menuCrop_lists">
+                         <div class="menuCrop_lists_show"></div>
+                         <a href="../index.html"> Home </a><br>
+                         <a href="../Settings.html"> Settings </a><br>
+                         <a href="#"> Credits </a><br>
+                         <a href="#"> Github </a>
+                    </div>
+               </ul>
+               <button class="menu_show fa" type="button">&#xf0d8;</button>
+               <button class="menu_top fa" type="button">&#xf062;</button>
+          </nav> 
+          <main class="wiki">
+               <p style="font-size: 35px; position: relative; top: 20px;"> Lua Script API: Basics of Coding </p>
+               <p style="font-size: 15px; position: relative; bottom: 10px;"> Meme1079 edited this page on 11/28/2022</p>
+               <div class="fake-hr-thin2"></div>
+               <h1> Variables </h1>
+                    <section>
+                         <p>
+                              Variables are manipulable storage spaces that can contain a variety of values. 
+                              You can use these for <ins>storing values and shortening the code</ins>.
+                         </p>
+                         <p>
+                              You can used them for <ins>shortening a line of functions and not repeating the code over and over again</ins>.
+                         </p>
+                         <p>
+                              When creating a Variable put a name, afterwards put equal <code>=</code> then put anything you want after equal <code>=</code>, 
+                              it could be a <b>String</b>, <b>Boolean</b>, <b>Numbers</b>, Etc. And you can not put a keywords in lua when naming a variable.
+                         </p>
+                         <p> Reserved Keywords: </p>
+                         <div class="code-border">
+<pre>
+<span id="code-keyword1">and</span>       <span id="code-keyword1">or</span>       <span id="code-keyword1">not</span>       <span id="code-keyword1">local</span>     <span id="code-keyword2">true</span>       <span id="code-keyword1">break</span>
+<span id="code-keyword2">false</span>     <span id="code-keyword2">nil</span>      <span id="code-keyword1">if</span>        <span id="code-keyword1">else</span>      <span id="code-keyword1">elseif</span>     <span id="code-keyword1">goto</span>
+<span id="code-keyword1">then</span>      <span id="code-keyword1">for</span>      <span id="code-keyword1">in</span>        <span id="code-keyword1">repeat</span>    <span id="code-keyword1">until</span>
+<span id="code-keyword1">while</span>     <span id="code-keyword1">do</span>       <span id="code-keyword1">return</span>    <span id="code-keyword1">end</span>       <span id="code-keyword1">function</span>
+</pre>
+                         </div>
+                         <p> Example of naming a variable correctly: </p>
+                         <div class="code-border">
+<pre>
+<span id="code-comment">-- Valid --</span>
+
+<span id="code-variable">var</span> <span id="code-keyword1">=</span> <span id="code-string">'string1'</span>        <span id="code-comment">-- a variable</span>
+<span id="code-variable">var1</span> <span id="code-keyword1">=</span> <span id="code-string">'string2'</span>       <span id="code-comment">-- a variable with a number behind it</span>
+<span id="code-variable">var_name</span> <span id="code-keyword1">=</span> <span id="code-keyword2">false</span>       <span id="code-comment">-- a variable with a underscore</span>
+<span id="code-variable">_nameVar</span> <span id="code-keyword1">=</span> <span id="code-keyword2">true</span>        <span id="code-comment">-- a variable with a underscore at the start</span>
+<span id="code-variable">var2</span> <span id="code-keyword1">=</span> <span id="code-string">'corn'</span><span id="code-keyword1">..</span><span id="code-string">'lover'</span> <span id="code-comment">-- a variable with the operators as a value</span>
+
+<span id="code-comment">-- Invalid --</span>
+
+<span id="code-keyword1">if</span> <span id="code-keyword1">=</span> <span id="code-string">'string3'</span>         <span id="code-comment">-- a variable named with a keyword</span>
+<span id="code-keyword1">>=</span> <span id="code-keyword1">=</span> <span id="code-keyword2">false</span>             <span id="code-comment">-- a variable named with a operator</span>
+<span id="code-number">23</span> <span id="code-keyword1">=</span> <span id="code-number">245</span>               <span id="code-comment">-- a varioble named with a value</span>
+<span id="code-variable">val</span> <span id="code-number">3</span> <span id="code-keyword1">=</span> <span id="code-keyword2">nil</span>            <span id="code-comment">-- a variable with a space</span>
+<span id="code-number">4</span><span id="code-variable">val</span> <span id="code-keyword1">=</span> <span id="code-number">245</span>             <span id="code-comment">-- a variable with the number at the start</span>
+</pre>
+                         </div>
+                         <p>
+                              You can multiple variables in one line, just seperate the variable name and the value with a comma <code>,</code>. If the variable name is greater than value or the value is greater than the variable name. 
+                              The missing variable name or value will become a <b>Nil</b> value.
+                         </p>
+                         <div class="code-border">
+<pre>
+<span id="code-variable">a</span>, <span id="code-variable">b</span>, <span id="code-variable">c</span> <span id="code-keyword1">=</span> <span id="code-number">3</span>, <span id="code-number">23.23</span>, <span id="code-keyword2">true</span>
+
+<span id="code-keyword1">function</span> <span id="code-function">onCreate</span>()
+     <span id="code-customfunc">debugPrint</span>(<span id="code-variable">a</span>, <span id="code-variable">b</span>, <span id="code-variable">c</span>) 
+     <span id="code-comment">-- a = 3, b = 23.23, c = true</span>
+<span id="code-keyword1">end</span>
+</pre>
+                         </div>
+                         <h2> Types of Values </h2>
+                              <section>
+                                   <ul>
+                                        <li>
+                                             <code>Strings</code> - A sequence of characters, you can put the characters around with single apostrophe <code>''</code> or double apostrophe <code>""</code>. 
+                                             You can also do double brackets <code>[[]]</code> for multi line <b>Strings</b>.
+                                        </li>
+                                        <li>
+                                             <code>Booleans</code> - A type of value it can be two possible values <code>true</code> or <code>false</code>.
+                                        </li>
+                                        <li>
+                                             <code>Numbers</code> - A numerical value used only to count or measure objects. <b>Numbers</b> can be represented as a <b>Int</b> where the number with no decimal point. 
+                                             Or it can be a <b>Float</b> where the number has a decimal point.
+                                        </li>
+                                        <li>
+                                             <code>Nil</code> - Zero or nonexistent, used to destory a value in a variable.
+                                        </li>
+                                        <li>
+                                             <code>Tables</code> - A type of value that stores multiple types of values. Tables can be either <b>Arrays</b> or <b>Dictionary</b>. 
+                                             Most programming language at the start of every value in a <b>Array</b> or <b>Dictionary</b> are always in <code>0</code> but in Lua it should be <code>1</code>.
+                                        </li>
+                                        <ul>
+                                             <li>
+                                                  <code>Arrays</code> - A collection of different values. When accessing this type of table put the variable name then brackets <br><code>[]</code> and inside must be a position number of the table.
+                                             </li>
+                                             <li>
+                                                  <code>Dictionary</code> - They define each value with a key, then a value it’s the same as creating a variable. 
+                                                  When accessing <br> this type of table put the variable name then brackets <code>[]</code> and inside must be a key name then apostrophe 
+                                                  single <br> <code>''</code> or double <code>""</code>. Or put a dot <code>.</code> then the key name.
+                                             </li>
+                                        </ul>
+                                   </ul>
+                                   <p> Example of Values: </p>
+                                   <div class="code-border">
+<pre>
+<span id="code-variable">ExVar1</span> <span id="code-keyword1">=</span> <span id="code-string">'string'</span>             <span id="code-comment">-- String (String)</span>
+<span id="code-variable">ExVar2</span> <span id="code-keyword1">=</span> <span id="code-string">"string"</span>             <span id="code-comment">-- String (Double [Optional])</span>
+<span id="code-variable">ExVar3</span> <span id="code-keyword1">=</span> <span id="code-string">[[
+     Look a multi line string
+     does it look cool? ]]</span>    <span id="code-comment">-- String (Brackets)</span>
+<span id="code-variable">ExVar4</span> <span id="code-keyword1">=</span> <span id="code-number">5</span>                    <span id="code-comment">-- Number (Int)</span>
+<span id="code-variable">ExVar5</span> <span id="code-keyword1">=</span> <span id="code-number">0.5</span>                  <span id="code-comment">-- Number (Float)</span>
+<span id="code-variable">ExVar6</span> <span id="code-keyword1">=</span> <span id="code-keyword2">true</span>                 <span id="code-comment">-- Boolean</span>
+<span id="code-variable">ExVar7</span> <span id="code-keyword1">=</span> <span id="code-keyword2">nil</span>                  <span id="code-comment">-- Nil</span>
+<span id="code-variable">ExVar8</span> <span id="code-keyword1">=</span> {<span id="code-value">value</span>}              <span id="code-comment">-- Table Array      (Empty)</span>
+<span id="code-variable">ExVar9</span> <span id="code-keyword1">=</span> {                    <span id="code-comment">-- Table Dictionary (Empty)</span>
+     <span id="code-key">key</span> <span id="code-keyword1">=</span> <span id="code-value">value</span>
+} 
+
+<span id="code-comment">-- Table Section --</span>
+
+TabArray1 <span id="code-keyword1">=</span> {<span id="code-string">'Psych'</span>, <span id="code-string">'Engine'</span>, <span id="code-string">'is'</span>, <span id="code-string">'Amazing'</span>} <span id="code-comment">-- a table array</span>
+<span id="code-comment">--[[ Use tableName[pos] to access it!
+     Example: TabArray1[3] will print 'is' ]]</span>
+
+TabArray2 <span id="code-keyword1">=</span> {<span id="code-string">'Psych'</span>, {<span id="code-string">'Engine'</span>, <span id="code-string">'is'</span>, <span id="code-string">'Amazing'</span>}} <span id="code-comment">-- a table array with a table</span>
+<span id="code-comment">--[[ Use tableName[pos1][pos2] to access it! 
+     Example: TabArray2[2][3] will print 'Amazing' ]]</span>
+
+TabDict1 <span id="code-keyword1">=</span> { <span id="code-comment">-- a table dictionary</span>
+     <span id="code-key">a</span> <span id="code-keyword1">=</span> <span id="code-string">'banana'</span>,
+     <span id="code-key">b</span> <span id="code-keyword1">=</span> <span id="code-string">'corn'</span>,
+     <span id="code-key">c</span> <span id="code-keyword1">=</span> <span id="code-string">'eggplant'</span>
+}
+<span id="code-comment">--[[ Use tableName.key or tableName['key'] to access it! 
+     Example: TabDict1.a will print 'banana'
+     Example: TabDict1['c'] will print 'eggplant' ]]</span>
+
+TabDict2 <span id="code-keyword1">=</span> { <span id="code-comment">-- a table dictionary with a table</span>
+     <span id="code-key">num</span> <span id="code-keyword1">=</span> {<span id="code-number">-1</span>, <span id="code-number">-0.5</span>, <span id="code-number">0</span>, <span id="code-number">0.5</span>, <span id="code-number">1</span>},
+     <span id="code-key">boo</span> <span id="code-keyword1">=</span> {<span id="code-keyword2">true</span>, <span id="code-keyword2">false</span>},
+     <span id="code-key">str</span> <span id="code-keyword1">=</span> {<span id="code-string">'FNF'</span>, <span id="code-string">'Psych'</span>, <span id="code-string">'Engine'</span>}
+}
+<span id="code-comment">--[[ Use tableName.key[pos] or tableName['key'][pos] to access it! 
+     Example: TabDict1.num[3] will print '0'
+     Example: TabDict1['boo'][1] will print 'true' ]]</span>     
+</pre>
+                                   </div>
+                              </section>
+                         <h2> Global and Local Variables </h2>
+                              <section>
+                                   
+                              </section>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Comments </h1>
+               <div class="fake-hr-thick"></div>
+               <h1> Operators </h1>
+                    <h2> Arithmetic </h2>
+                    <h2> Relational </h2>
+                    <h2> Logical </h2>
+                    <h2> Miscellaneous </h2>
+          </main>
+     </body>
+     
+</html>
