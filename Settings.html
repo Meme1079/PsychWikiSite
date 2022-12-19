@@ -7,7 +7,7 @@
           <meta name="color-scheme" content="dark"> <!-- Epic dark theme --> 
           <link rel="icon" href="Lua API Pages/src/images/Psych.png"> <!-- The Favicon -->
           <link rel="stylesheet" href="Lua API Pages/src/css/Format.css">   <!-- The Main Wiki Format -->
-          <link rel="stylesheet" href="Lua API Pages/src/css/Setting.css">  <!-- The Menu Format -->
+          <link rel="stylesheet" href="Lua API Pages/src/css/Settings.css">  <!-- The Menu Format -->
           <link rel="stylesheet" href="Lua API Pages/src/css/Code Format.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
           <script defer src="Lua API Pages/src/javascript/Setting.js"></script>
@@ -18,16 +18,57 @@
                     <div class="icon fa" style="position: relative; right: 0.05cm;">&#xf0d9;</div>
                </button>
                <section>
-                    <div class="setting">
-                         <button class="icon-bg">
-                              <div class="icon fa" style="left: 0.55cm;">&#xf186;</div>
-                         </button>
-                         <div class="description">
-                              <p class="sup-desc"> Dark/Light Mode </p>
-                              <p class="sub-desc"> Changes the website color theme </p>
+                    <div class="setting" style="height: 10cm;">
+                         <div class="icon-bg">
+                              <div class="icon fa" style="cursor: defualt;">&#xf108;</div>
                          </div>
+                         <div class="description">
+                              <p class="sup-desc"> Preference Themes </p>
+                              <p class="sub-desc"> Changes the website theme </p>
+                         </div>
+                         <div class="line-hr"></div>
+                         <section>
+                              <div class="displayBG">
+                                   <div class="displayHead"></div>
+                                   <div class="displayHeadDesc"></div>
+                                   <div class="displayHeadLine"></div>
+                                   <div class="displayH1"></div>
+                                   <div class="displayH1Line"></div>
+                                   <div class="displayH3"></div>
+                                   <div class="displayDesc"></div>
+                                   <div style="position: relative; top: 0.5cm;">
+                                        <div class="displayH3"></div>
+                                        <div class="displayDesc"></div>
+                                   </div>
+                                   <div style="position: relative; top: 1cm;">
+                                        <div class="displayH3"></div>
+                                        <div class="displayDesc"></div>
+                                   </div>
+                                   <div class="displayThickLine"></div>
+                              </div>
+                         </section>
+                         <section>
+                              <div class="optionBG">
+                                   <button class="optionIconBG" onclick="changeLightTheme()">
+                                        <div class="fa" style="font-size: 25px;">&#xf0eb;</div>
+                                   </button>
+                                   <p class="titleOption"> Light High Contrast Theme </p>
+                              </div>
+                              <div class="optionBG">
+                                   <button class="optionIconBG" onclick="changeDarkTheme()">
+                                        <div class="fa" style="font-size: 25px;">&#xf186;</div>
+                                   </button>
+                                   <p class="titleOption"> Dark High Contrast Theme </p>
+                              </div>
+                              <div class="optionBG">
+                                   <button class="optionIconBG" onclick="changeDimmedTheme()">
+                                        <div class="fa" style="font-size: 25px;">&#xf123;</div>
+                                   </button>
+                                   <p class="titleOption"> Dark Dimmed Theme </p>
+                              </div>
+                         </section>
                     </div>
-                    <div class="setting" style="top: 7.3cm; height: 10cm;">
+                    <!-- <div class="setting" style="top: 7.3cm; height: 10cm;">
                          <button class="icon-bg">
                               <div class="icon fa">&#xf121;</div>
                          </button>
@@ -52,7 +93,7 @@
 <span id="code-keyword1">end</span>
 </pre>
                          </div>
-                    </div>
+                    </div> -->
                </section>
           </body>
      </main>

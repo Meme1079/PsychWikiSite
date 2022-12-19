@@ -61,7 +61,7 @@ function goTop() {
 // Setting the current state
 
 const bodyTag = document.getElementsByTagName('body');
-const scroTag = document.getElementsByTagName('meta');
+const metaTag = document.getElementsByTagName('meta');
 const codeTag = document.getElementsByTagName('code');
 
 const menuShow = document.getElementsByClassName('menu_show');
@@ -71,37 +71,37 @@ const thin1Class = document.getElementsByClassName('fake-hr-thin1');
 const thin2Class = document.getElementsByClassName('fake-hr-thin2');
 const thickClass = document.getElementsByClassName('fake-hr-thick');
 
-bodyTag[0].style.backgroundColor = localStorage.getItem('bodyBG')
-scroTag[2].content = localStorage.getItem('metaTheme')
-
-if (bodyTag[0].style.backgroundColor === 'white') {
+const ParseThemeContent = JSON.parse(localStorage.getItem('ThemeContent'))
+if (ParseThemeContent.bodyColor == 'white') {
      bodyTag[0].style.backgroundColor = 'white'
-     scroTag[2].content = 'light'
+     metaTag[2].content = 'light'
 
-     menuShow[0].style.backgroundColor = 'rgb(214, 214, 214)'
-     menuTop[0].style.backgroundColor = 'rgb(214, 214, 214)'
+     menuShow[0].style.backgroundColor = '#e0e0e0'
+     menuTop[0].style.backgroundColor = '#e0e0e0'
 
      for (let i = 0; i < codeTag.length; i++) {
-          codeTag[i].style.backgroundColor = '#c5d2de' //#a1abb4
-          codeTag[i].style.border = '#c5d2de solid'
+          codeTag[i].style.backgroundColor = '#c1cfe6'
+          codeTag[i].style.border = '#c1cfe6 solid 10px'
+          codeTag[i].style.borderWidth = 'thin 3px'
      }
 
      thin2Class[0].style.backgroundColor = 'black'
      for (let i = 0; i < thin1Class.length; i++) {
-          thin1Class[i].style.backgroundColor = 'black' 
+          thin1Class[i].style.backgroundColor = 'black'
      }
      for (let i = 0; i < thickClass.length; i++) {
-          thickClass[i].style.backgroundColor = 'black'  
+          thickClass[i].style.backgroundColor = 'black'
      }
 } else {
      bodyTag[0].style.backgroundColor = 'black'
-     scroTag[2].content = 'dark'
+     metaTag[2].content = 'dark'
 
-     menuShow[0].style.backgroundColor = 'rgb(36, 36, 36)'
-     menuTop[0].style.backgroundColor = 'rgb(36, 36, 36)'
+     menuShow[0].style.backgroundColor = 'black'
+     menuTop[0].style.backgroundColor = 'black'
 
      for (let i = 0; i < codeTag.length; i++) {
           codeTag[i].style.backgroundColor = '#464b53'
-          codeTag[i].style.border = '#464b53 solid'
+          codeTag[i].style.border = '#464b53 solid 10px'
+          codeTag[i].style.borderWidth = 'thin 3px'
      }
 }

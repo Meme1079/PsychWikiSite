@@ -32,7 +32,7 @@
      bottom: 0.45cm; left: 0.45cm;
 }
 
-.icon { cursor: pointer; }
+button { cursor: pointer; }
 
 .setting .description {
      width: 10cm;
@@ -62,6 +62,105 @@
      top: 2.9cm;
 }
 
+/* Display */
+
+.setting .displayBG {
+     background-color: black;
+     border: grey solid 1px;
+     border-radius: 10px;
+     width: 6cm; height: 6.4cm;
+     position: relative;
+     top: 3.2cm; left: 8.5cm;
+}
+
+.setting .displayHead {
+     background-color: white;
+     width: 3.6cm; height: 0.45cm;
+     position: relative;
+     top: 0.3cm; left: 0.3cm;
+}
+
+.setting .displayHeadDesc {
+     background-color: white;
+     width: 2cm; height: 0.25cm;
+     position: relative;
+     top: 0.5cm; left: 0.3cm;
+}
+
+.setting .displayHeadLine {
+     background-color: white;
+     opacity: 0.55;
+     width: 5.4cm; height: 0.02cm;
+     position: relative;
+     top: 0.7cm; left: 0.3cm;   
+}
+
+.setting .displayH1Line {
+     background-color: white;
+     opacity: 0.55;
+     width: 4cm; height: 0.02cm;
+     position: relative;
+     top: 1.2cm; left: 0.3cm;   
+}
+
+.setting .displayThickLine {
+     background-color: white; 
+     opacity: 0.55;
+     width: 4cm; height: 0.1cm;
+     position: relative;
+     top: 3cm; left: 0.3cm;       
+}
+
+.setting .displayH1 {
+     background-color: white;
+     width: 3.2cm; height: 0.5cm;
+     position: relative;
+     top: 1cm; left: 0.3cm;
+}
+
+.setting .displayH3 {
+     background-color: white; 
+     width: 2.3cm; height: 0.4cm;
+     position: relative;
+     top: 1.5cm; left: 0.3cm;    
+}
+
+.setting .displayDesc {
+     background-color: white; 
+     width: 3cm; height: 0.2cm;
+     position: relative;
+     top: 1.7cm; left: 0.3cm;       
+}
+
+/* Display Options */
+
+.setting .optionBG {
+     background-color: black;
+     border: grey solid 1px;
+     border-radius: 10px;
+     margin-top: 10px;
+     width: 8cm; height: 1.6cm;
+     position: relative;
+     bottom: 3cm; left: 0.23cm;
+}
+
+.setting .optionIconBG {
+     background-color: black;
+     border: grey solid 1px; 
+     border-radius: 10px;
+     width: 1.1cm; height: 1.1cm;
+     position: relative;
+     top: 0.2cm; left: 0.2cm;
+}
+
+.setting .titleOption {
+     z-index: 2;
+     font-weight: bold;
+     position: relative;
+     bottom: 1cm; left: 1.8cm;     
+}
+
+/* 
 .setting .code-title {
      font-size: 20px;
      text-align: center;
@@ -84,4 +183,4 @@
      line-height: 20px;
      position: relative;
      left: 15px;
-}
+} */
