@@ -4,26 +4,25 @@
           <title> PsychWiki - Settings </title>
           <meta charset="utf-8"> <!-- THE METEVERSE -->
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="color-scheme" content="dark"> <!-- Epic dark theme --> 
-          <link rel="icon" href="Lua API Pages/src/images/Psych.png"> <!-- The Favicon -->
-          <link rel="stylesheet" href="Lua API Pages/src/css/Format.css">   <!-- The Main Wiki Format -->
-          <link rel="stylesheet" href="Lua API Pages/src/css/Setting.css">  <!-- The Menu Format -->
-          <link rel="stylesheet" href="Lua API Pages/src/css/Code Format.css">
+          <meta name="color-scheme" content="dark">         <!-- Epic dark theme -->
+          <link rel="icon" href="../../images/Psych.png">   <!-- The Favicon -->
+          <link rel="stylesheet" href="../../css/Wiki Page/Format.css">   <!-- The Main Wiki Format -->
+          <link rel="stylesheet" href="../../css/Menu/Setting.css">       <!-- The Menu Format -->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <script defer src="Lua API Pages/src/javascript/Setting.js"></script>
+          <script defer src="../../javascript/Menu/Setting.js"></script>  <!-- The Main Setting Code Stuff -->
      </head>
-     <main>
-          <body>
-               <button class="icon-bgBack" onclick="history.back()">
-                    <div class="icon fa" style="position: relative; right: 0.05cm;">&#xf0d9;</div>
-               </button>
+     <body>
+          <button class="icon-bgBack" onclick="history.back()">
+               <div class="icon fa" style="position: relative; right: 0.05cm;">&#xf0d9;</div>
+          </button>
+          <main>
                <section>
                     <div class="setting" style="height: 10cm;">
                          <div class="icon-bg">
                               <div class="icon fa" style="cursor: defualt;">&#xf108;</div>
                          </div>
                          <div class="description">
-                              <p class="sup-desc"> Preference Themes </p>
+                              <p class="sup-desc"> Preference Site Themes </p>
                               <p class="sub-desc"> Changes the website theme </p>
                          </div>
                          <div class="line-hr"></div>
@@ -55,7 +54,7 @@
                                    <p class="titleOption"> Light High Contrast Theme </p>
                               </div>
                               <div class="optionBG">
-                                   <button class="optionIconBG" onclick="changeDarkTheme()">
+                                   <button class="optionIconBG" onclick="changeDarkTheme()" style="border: green solid 1.5px;">
                                         <div class="fa" style="font-size: 25px;">&#xf186;</div>
                                    </button>
                                    <p class="titleOption"> Dark High Contrast Theme </p>

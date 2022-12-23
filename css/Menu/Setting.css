@@ -34,6 +34,12 @@
 
 button { cursor: pointer; }
 
+.fa { 
+     -webkit-user-select: none; /* Safari */
+     -ms-user-select: none; /* IE 10 and IE 11 */
+     user-select: none; /* Standard syntax */ 
+}
+
 .setting .description {
      width: 10cm;
      position: absolute;

@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html>
      <head>
-          <title> PsychWiki - General Functions </title>
+          <title> PsychWikiSite </title>
           <meta charset="utf-8"> <!-- THE METEVERSE -->
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <meta name="color-scheme" content="dark">           <!-- Epic dark theme --> 
-          <link rel="icon" href="src/images/Psych.png">       <!-- The Favicon -->
-          <link rel="stylesheet" href="src/css/Format.css">   <!-- The Main Wiki Format -->
-          <link rel="stylesheet" href="src/css/Menu.css">     <!-- The Menu Format -->
+          <link rel="icon" href="../../images/Psych.png">        <!-- The Favicon -->
+          <link rel="stylesheet" href="../../css/Wiki Page/Format.css">   <!-- The Main Wiki Format -->
+          <link rel="stylesheet" href="../../css/Top Menu.css">     <!-- The Menu Format -->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <script defer src="src/javascript/Main Code.js"></script>  <!-- Main Code duh -->
-          <script defer src="src/javascript/Resize.js"></script>     <!-- Resize Support -->
+          <script defer src="../../javascript/Main Code.js"></script>
+          <script defer src="../../javascript/Resize.js"></script>
+          <script defer src="../../javascript/ChangeSiteTheme.js"></script>
      </head>
      <body>
-          <nav class="menu_bg">                    
-               <p class="menu_title"> PsychWiki </p>
-               <img class="menu_image" src="src/images/Psych.png" width="60" height="60">
+          <nav class="menu_bg">
+               <p class="menu_title"></p>
+               <img class="menu_image" src="../../images/Psych.png" width="60" height="60">
 
                <input type="checkBox" id="check">
                <label for="check" class="checkbtn">
                     <div class="fa fa-ellipsis-h"></div>
                </label>
-          
+
                <ul class="menu_lists">
-                    <li class="menu_button"><a class="menu_links" href="../index.html"> Home <div class="fa fa-home"></div></a></li>
-                    <li class="menu_button"><a class="menu_links" href="../Settings.html"> Settings <div class="fa fa-cog"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="../../index.html"> Home <div class="fa fa-home"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="../Menu/Settings.html"> Settings <div class="fa fa-cog"></div></a></li>
                     <li class="menu_button"><a class="menu_links" href="#"> Credits <div class="fa fa-bars"></div></a></li>
-                    <li class="menu_button"><a class="menu_links" href="#"> Github <div class="fa fa-github"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="https://github.com/Meme1079/PsychWikiSite"> Github <div class="fa fa-github"></div></a></li>
                     <div class="menuCrop_lists">
                          <div class="menuCrop_lists_show"></div>
-                         <a href="../index.html"> Home </a><br>
-                         <a href="../Settings.html"> Settings </a><br>
-                         <a href="#"> Credits </a><br>
-                         <a href="#"> Github </a>
+                         <section>
+                              <a href="../../index.html">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Home <div class="fa fa-home"></div></div>
+                                   </div>
+                              </a>
+                              <a href="../Menu/Settings.html">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Settings <div class="fa fa-cog"></div></div>
+                                   </div>
+                              </a>
+                              <a href="#">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Credits <div class="fa fa-bars"></div></div>
+                                   </div>
+                              </a>
+                              <a href="https://github.com/Meme1079/PsychWikiSite">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Github <div class="fa fa-github"></div></div>
+                                   </div>
+                              </a>
+                         </section>
                     </div>
                </ul>
                <button class="menu_show fa" type="button">&#xf0d8;</button>
                <button class="menu_top fa" type="button">&#xf062;</button>
-          </nav> 
+          </nav>  
           <main class="wiki">
-               <p style="font-size: 35px; position: relative; top: 20px;"> Lua Script API: Shader Functions </p>
+               <p style="font-size: 35px; position: relative; top: 20px;" id="LCA_title"> Lua Script API: </p>
                <p style="font-size: 15px; position: relative; top: -10px;"> Meme1079 edited this page on 11/28/2022</p>
                <div class="fake-hr-thin2"></div>
                <div class="fake-horizontal-gold">
                     <blockquote>
-                         <span class="fa gold">&#xf071;</span> <span class="gold">Warning</span>:
+                         <span class="fa fa-exclamation-triangle gold"></span> <span class="gold">Warning</span>:
                          <span><em>
                               Take all the shader functions a grain of salt due to my lack of knowledge on shaders, 
                               you can do pull request to correct the description of the function and parameter; help is always appreciated.
@@ -53,7 +72,7 @@
                </div>
                <div class="fake-horizontal-blue">
                     <blockquote>
-                         <span class="fa blue">&#xf05a;</span> <span class="blue">Note</span>:
+                         <span class="fa fa-info-circle blue"></span> <span class="blue">Note</span>:
                          <span><em>
                               The shader functions will not work unless you have a <code>frag</code> or <code>vert</code> file in the <code>shaders</code> file.
                          </em></span>

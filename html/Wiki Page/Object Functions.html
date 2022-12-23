@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title> PsychWikiSite </title>
+          <meta charset="utf-8"> <!-- THE METEVERSE -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="color-scheme" content="dark">           <!-- Epic dark theme --> 
+          <link rel="icon" href="../../images/Psych.png">        <!-- The Favicon -->
+          <link rel="stylesheet" href="../../css/Wiki Page/Format.css">   <!-- The Main Wiki Format -->
+          <link rel="stylesheet" href="../../css/Top Menu.css">     <!-- The Menu Format -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script defer src="../../javascript/Main Code.js"></script>
+          <script defer src="../../javascript/Resize.js"></script>
+          <script defer src="../../javascript/ChangeSiteTheme.js"></script>
+     </head>
+     <body>
+          <nav class="menu_bg">
+               <p class="menu_title"></p>
+               <img class="menu_image" src="../../images/Psych.png" width="60" height="60">
+
+               <input type="checkBox" id="check">
+               <label for="check" class="checkbtn">
+                    <div class="fa fa-ellipsis-h"></div>
+               </label>
+
+               <ul class="menu_lists">
+                    <li class="menu_button"><a class="menu_links" href="../../index.html"> Home <div class="fa fa-home"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="../Menu/Settings.html"> Settings <div class="fa fa-cog"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="#"> Credits <div class="fa fa-bars"></div></a></li>
+                    <li class="menu_button"><a class="menu_links" href="https://github.com/Meme1079/PsychWikiSite"> Github <div class="fa fa-github"></div></a></li>
+                    <div class="menuCrop_lists">
+                         <div class="menuCrop_lists_show"></div>
+                         <section>
+                              <a href="../../index.html">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Home <div class="fa fa-home"></div></div>
+                                   </div>
+                              </a>
+                              <a href="../Menu/Settings.html">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Settings <div class="fa fa-cog"></div></div>
+                                   </div>
+                              </a>
+                              <a href="#">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Credits <div class="fa fa-bars"></div></div>
+                                   </div>
+                              </a>
+                              <a href="https://github.com/Meme1079/PsychWikiSite">
+                                   <div class="menuTextDis1">
+                                        <div class="menuTextDis2"> Github <div class="fa fa-github"></div></div>
+                                   </div>
+                              </a>
+                         </section>
+                    </div>
+               </ul>
+               <button class="menu_show fa" type="button">&#xf0d8;</button>
+               <button class="menu_top fa" type="button">&#xf062;</button>
+          </nav> 
+          <main class="wiki">
+               <p style="font-size: 35px; position: relative; top: 20px;" id="LCA_title"> Lua Script API: </p>
+               <p style="font-size: 15px; position: relative; top: -10px;"> Meme1079 edited this page on 11/28/2022</p>
+               <div class="fake-hr-thin2"></div>
+               <h1> Graphics Functions </h1>
+               <section>
+                    <h3> makeGraphic(tag:String, width:Int, height:Int, color:String) </h3>
+                         <p> Will create an object with a solid color. </p>
+                         <ul>
+                              <li>
+                                   <code>tag</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>width</code> - The width value in pixels of the object.
+                              </li>
+                              <li>
+                                   <code>height</code> - The height value in pixels of the object.
+                              </li>
+                              <li>
+                                   <code>color</code> - The hexadecimal color of the object.
+                              </li>
+                         </ul>
+                         <div class="fake-horizontal-green">
+                              <blockquote>
+                                   <span class="fa fa-code green"></span> <span class="green">Example</span>:
+                                   <span>
+                                        <code>makeGraphic('testBlackSquare', 1000, 1000, '000000')</code>
+                                   </span>
+                              </blockquote>
+                         </div>
+                    <h3> setBlendMode(obj:String, blend:String) </h3>
+                         <p> Changes the blend mode of a lua sprite/object. <i>(Works similar to how Photoshop do it)</i> </p>
+                         <a href="https://api.haxe.org/flash/display/BlendMode.html">List of blend modes</a>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>blend</code> - The blend mode to be used.
+                              </li>
+                         </ul>
+               </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Animations Functions </h1>  <!-- Have fun updating this lol -->
+               <section>
+                    <h3> playAnim(obj:String, name:String, forced:Bool = false, ?reverse:Bool = false, ?startFrame:Int = 0) </h3>
+                    <p> Plays animation name on a lua sprite/object with the tag or variable object. </p>
+                    <ul>
+                         <li>
+                              <code>obj</code> - The sprite tag or object variable name.
+                         </li>
+                         <li>
+                              <code>name</code> - The name of the animation to be used.
+                         </li>
+                         <li>
+                              <code>forced</code> - If set to <code>true</code>, then the current animation is the same as the one you're attempting to play, 
+                              the animation will be reset, Default value is <code>false</code>.
+                         </li>
+                         <li>
+                              <code>reverse</code> - An optional parameter, Will reverse the animation when played.
+                         </li>
+                         <li>
+                              <code>startFrame</code> - An optional parameter, The starting frame of the animation to be played.
+                         </li>
+                    </ul>
+               <h3> addAnimation(obj:String, name:String, frames:Array&lt;Ins&gt;, framerate:Int = 24, loop:Bool = true) </h3>
+                    <div class="fake-horizontal-blue">
+                         <blockquote>
+                              <span class="fa fa-info-circle blue"></span> <span class="blue">Note</span>:
+                              <span><em>
+                                   This will only play the first prefix name on the <code>xml</code> file.
+                              </em></span>
+                         </blockquote>
+                    </div>
+                    <p> 
+                         Adds an animation to the lua sprite/object with the specified indices on the <code>indices</code> parameter; it can override an animation. 
+                         If there are using the same name on the <code>name</code> parameter. 
+                    </p>
+                    <ul>
+                         <li>
+                              <code>obj</code> - The sprite tag or object variable name.
+                         </li>
+                         <li>
+                              <code>name</code> - The name of the animation to be used.
+                         </li>
+                         <li>
+                              <code>frames</code> - The frames for the animation that should be used, Example: <code>{1, 2, 3}</code>
+                         </li>
+                         <li>
+                              <code>framerate</code> - How many frames per second does the animation have, Default value is <code>24</code>.
+                         </li>
+                         <li>
+                              <code>loop</code> - This will loop the animation, Default value is <code>true</code>.
+                         </li>
+                    </ul>
+               <h3> addAnimationByPrefix(tag:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true) </h3>
+                    <p>
+                         Adds an animation to the lua sprite/object without the specified indices; it can override an animation. 
+                         If there are using the same name on the <code>name</code> parameter.
+                    </p>
+                    <ul>
+                         <li>
+                              <code>obj</code> - The sprite tag or object variable name.
+                         </li>
+                         <li>
+                              <code>name</code> - The name of the animation to be used.
+                         </li>
+                         <li>
+                              <code>prefix</code> - The name of the animation inside of the <code>xml</code> file.
+                         </li>
+                         <li>
+                              <code>framerate</code> - How many frames per second does the animation have, Default value is <code>24</code>.
+                         </li>
+                         <li>
+                              <code>loop</code> - This will loop the animation, Default value is <code>true</code>.
+                         </li>
+                    </ul>
+               <h3> addAnimationByIndices(tag:String, name:String, prefix:String, indices:String, framerate:Int = 24) </h3>
+                    <p>
+                         Adds an animation to the lua sprite/object with the specified indices on <code>indices</code> parameter; it can override an animation. 
+                         If there are using the same name on the <code>name</code> parameter.
+                    </p>
+                    <p> If you want the looped version of this function use <code>addAnimationByIndicesLoop()</code>; all parameters and use are the same. </p>
+                    <ul>
+                         <li>
+                              <code>obj</code> - The sprite tag or object variable name.
+                         </li>
+                         <li>
+                              <code>name</code> - The name of the animation to be used.
+                         </li>
+                         <li>
+                              <code>prefix</code> - The name of the animation inside of the <code>xml</code> file.
+                         </li>
+                         <li>
+                              <code>indices</code> - The frames for the animation that should be used, must be separated each by a comma, Example: <code>1, 2, 3</code>
+                         </li>
+                         <li>
+                              <code>loop</code> - This will loop the animation, Default value is <code>true</code>.
+                         </li>
+                    </ul>
+               <h3> addOffset(obj:String, anim:String, x:Float, y:Float) </h3>
+                    <p> Adds an offset to the lua sprite/object. </p>
+                    <ul>
+                         <li>
+                              <code>obj</code> - The sprite tag or object variable name.
+                         </li>
+                         <li>
+                              <code>anim</code> - The name of the animation to be used.
+                         </li>
+                         <li>
+                              <code>x</code> - the new x value of the animation.
+                         </li>
+                         <li>
+                              <code>y</code> - the new y value of the animation.
+                         </li>
+                    </ul>
+               </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Object Order Functions </h1>
+               <section>
+                    <h3> setObjectOrder(obj:String, position:Int) </h3>
+                         <p> <ins>Sets the current lua sprite/object</ins> with a new layer value position. </p>
+                         <p>
+                              If you want the character group use <code>boyfriendGroup</code>, <code>gfGroup</code>, and <code>dadGroup</code>. 
+                              They can be placed in the <code>obj</code> or the <code>position</code> parameters.
+                         </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>position</code> - The new layer position order of the object.
+                              </li>
+                         </ul>
+                    <h3> getObjectOrder(obj:String) </h3>
+                         <p> <ins>Gets the current lua sprite/object</ins> current layer value position. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                         </ul>
+                    <h3> objectsOverlap(obj1:String, obj2:String) </h3>
+                         <p> Checks if two lua sprite/object are overlaping eachother, Will return <code>false</code> if not. </p>
+                         <ul>
+                              <li>
+                                   <code>obj1</code> - The first lua sprite/object tag.
+                              </li>
+                              <li>
+                                   <code>obj2</code> - The second lua sprite/object tag.
+                              </li>
+                         </ul>
+               </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Scale Functions </h1>
+               <section>
+                    <h3> setGraphicSize(obj:String, multX:Float, multY:Float = 0) </h3>
+                         <p> Sets the lua sprite/object size <ins>by pixel width or height</ins>. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>multX</code> - The width of the object to be set, Default value is <code>1</code>.
+                              </li>
+                              <li>
+                                   <code>multY</code> - The heigth of the object to be set, Default value is <code>1</code>.
+                              </li>
+                         </ul>
+                    <h3> scaleObject(obj:String, multX:Float, multY:Float = 0) </h3>
+                         <p> Sets the lua sprite/object size <ins>by scale property</ins>. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>multX</code> - The width of the object to be set, Default value is <code>1</code>.
+                              </li>
+                              <li>
+                                   <code>multY</code> - The heigth of the object to be set, Default value is <code>1</code>.
+                              </li>
+                         </ul>
+                    <h3> updateHitbox(obj:String) </h3>
+                         <p> Updates the lua sprite/object hitboxes, use this if you're changing the scale of the lua sprite/object. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                         </ul>
+               </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Position Functions </h1>
+               <section>
+                    <h3> getMidpointX(variable:String) </h3>
+                         <p> Gets the lua sprite/object current <ins>midpoint hitbox x value</ins>. </p>
+                         <ul>
+                              <li>
+                                   <code>variable</code> - The sprite tag or object variable name.
+                              </li>
+                         </ul>
+                    <h3> getMidpointY(variable:String) </h3>
+                         <p> Gets the lua sprite/object current <ins>midpoint hitbox y value</ins>. </p>
+                    <h3> getGraphicMidpointX(variable:String) </h3>
+                         <p> Gets the lua sprite/object current <ins>midpoint graphic x value</ins>. </p>
+                    <h3> getGraphicMidpointY(variable:String) </h3>
+                         <p> Gets the lua sprite/object current <ins>midpoint graphic y value</ins>. </p>
+                    <h3> getScreenPositionX(variable:String) </h3>
+                         <p> Gets the lua sprite/object current <ins>x position value</ins> </p>
+                    <h3> getScreenPositionY(variable:String) </h3>
+                         <p> Gets the lua sprite/object current <ins>y position value</ins> </p>
+                    <h3> screenCenter(obj:String, pos:String = 'xy') </h3>
+                         <p> Sets the lua sprite/object to center with the <code>pos</code> parameter. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>pos</code> - The position you want to set in, it could be either: <code>X</code>, <code>Y</code>, <code>XY</code>.
+                              </li>
+                         </ul>
+               </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Other Functions </h1>
+               <section>
+                    <h3> setScrollFactor(obj:String, scrollX:Float, scrollY:Float) </h3>
+                         <div class="fake-horizontal-blue">
+                              <blockquote>
+                                   <span class="fa fa-info-circle blue"></span> <span class="blue">Note</span>:
+                                   <span><em>
+                                        Boyfriend/Opponent have a scrollX/scrollY value of <code>1</code>, while Girlfriend have a scrollX/scrollY value of <code>0.95</code>, 
+                                        if you're gonna do background elements, it's highly suggested that you make the values something under <code>1</code>.
+                                   </em></span>
+                              </blockquote>
+                         </div>
+                         <p> Changes the lua sprite/object that moves along the camera when switching to characters. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>scrollX</code> - The x value of the scroll factor to be set.
+                              </li>
+                              <li>
+                                   <code>scrollY</code> - The y value of the scroll factor to be set.
+                              </li>
+                         </ul>
+                    <h3> setObjectCamera(obj:String, camera:String) </h3>
+                         <p> Sets the lua sprite/object camera state. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The sprite tag or object variable name.
+                              </li>
+                              <li>
+                                   <code>camera</code> - The camera state to be set in, Can be either <code>camGame</code>, <code>camHUD</code> or <code>camOther</code>.
+                              </li>
+                         </ul>
+                    <h3> removeFromGroup(obj:String, index:Int, ?dontDestroy:Bool = false) </h3>
+                         <p> Removes all of a specific note type. </p>
+                         <ul>
+                              <li>
+                                   <code>obj</code> - The current strum group type.
+                              </li>
+                              <li>
+                                   <code>index</code> - The Member ID of the note to be removed, Opponent: <code>0,1,2,3</code> and Player: <code>4,5,6,7</code>.
+                              </li>
+                              <li>
+                                   <code>dontDestroy</code> - An optional parameter. Won't clear the member from memory, you will probably never ever use this.
+                              </li>
+                         </ul>
+                         <div class="fake-horizontal-green">
+                              <blockquote>
+                                   <span class="fa fa-code green"></span> <span class="green">Example</span>:
+                                   <span>
+                                        To remove the first spawned note from the group you should use <code>removeFromGroup('notes', 0)</code>.
+                                   </span>
+                              </blockquote>
+                         </div>
+                    <h3> updateHitboxFromGroup(group:String, index:Int) </h3>
+                         <p> Updates the note group hitboxes. </p>
+                         <ul>
+                              <li>
+                                   <code>group</code> - The current strum group type.
+                              </li>
+                              <li>
+                                   <code>index</code> - The Member ID of the note to be removed, Opponent: <code>0,1,2,3</code> and Player: <code>4,5,6,7</code>.
+                              </li>
+                         </ul>
+               </section>
+          </main>
+     </body>
+</html>
