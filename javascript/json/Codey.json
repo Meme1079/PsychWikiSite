@@ -1,0 +1,16 @@
+{
+     "preTag": "white",
+     "code_keyword1": "#ff9492",
+     "code_keyword2": "#91cbff",
+     "code_operator1": "#ff9492",
+     "code_operator2": "#ff9492",
+     "code_number": "#91cbff",
+     "code_string": "#91cbff",
+     "code_comment": "#bdc4cc",
+     "code_function": "#dbb7ff",
+     "code_customfunc": "#91cbff",
+     "code_parameter": "#ffb14a",
+     "code_datamani": "#47cab0",
+     "code_variable": "#ffffff",
+     "code_key": "#91cbff"
+}

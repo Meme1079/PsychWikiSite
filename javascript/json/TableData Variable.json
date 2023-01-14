@@ -1,0 +1,451 @@
+{
+     "Data_LuaUnique": [
+          [
+               "Function_Continue",
+               "Continues the game, Will return to <code>1</code>; The <code>return</code> keyword is used here."
+          ],
+          [
+               "Function_Stop",
+               "Stops the game, Will return to <code>2</code>; The <code>return</code> keyword is used here."
+          ],
+          [
+               "Function_StopLua",
+               "Stops any lua files to be runed, Will return to <code>3</code>; The <code>return</code> keyword is used here."
+          ],
+          [
+               "luaDebugMode",
+               "Enables debug mode"
+          ],
+          [
+               "luaDeprecatedWarnings",
+               "Informs you if a function or variable is deprecated and shouldn't be used anymore. Only works in Debug mode."
+          ],
+          [
+               "inChartEditor",
+               "Tells you if your script is running on Chart Editor's chart playtest."
+          ]
+     ],
+     "Data_SongWeek": [
+          [
+               "curStage",
+               "The current stage of the song.",
+               "getPropertyFromClass('PlayState', 'SONG.stage')"
+          ],
+          [
+               "curBpm",
+               "The current BPM of the song.",
+               "getPropertyFromClass('Conductor', 'bpm')"
+          ],
+          [
+               "bpm",
+               "The starting BPM of the song.",
+               "getProperty('SONG.bpm')"
+          ],
+          [
+               "scrollSpeed",
+               "The starting scroll speed of the song.",
+               "getProperty('SONG.speed')"
+          ],
+          [
+               "crochet",
+               "The interval between Beat hits.",
+               "getPropertyFromClass('Conductor', 'crochet')"
+          ],
+          [
+               "stepCrochet",
+               "The interval between Step hits.",
+               "getPropertyFromClass('Conductor', 'stepCrochet')"
+          ],
+          [
+               "songLength",
+               "The song duration in milliseconds.",
+               "getProperty('songLength')"
+          ],
+          [
+               "songName",
+               "The song name to be chosen.",
+               "getProperty('SONG.song')"
+          ],
+          [
+               "isStoryMode",
+               "Tells if its in story mode.",
+               "getProperty('isStoryMode')"
+          ],
+          [
+               "difficulty",
+               "Returns the difficulty ID number.",
+               "getPropertyFromClass('PlayState', 'storyDifficulty')"
+          ],
+          [
+               "difficultyName",
+               "Returns the difficulty name to be chosen.",
+               "getPropertyFromClass('CoolUtil', 'difficulties['..difficulty..']')"
+          ],
+          [
+               "weekRaw",
+               "Returns the raw current week number. I am 99% doubt you will ever use this ever in your life.",
+               "getPropertyFromClass('PlayState', 'storyWeek')"
+          ],
+          [
+               "week",
+               "Returns the properly formatted current week file name.",
+               "getPropertyFromClass('WeekData', 'weeksList['..weekRaw..']')"
+          ],
+          [
+               "currentModDirectory",
+               "Checks the current mod directory.",
+               "getPropertyFromClass('Paths', 'currentModDirectory')"
+          ]
+     ],
+     "Data_Game": [
+          [
+               "startedCountdown",
+               "Indicates whether the countdown has already begun.",
+               "getProperty('startedCountdown')"
+          ],
+          [
+               "seenCutscene",
+               "Checks if the cutscene is seen.",
+               "getPropertyFromClass('PlayState', 'seenCutscene')"
+          ],
+          [
+               "curStep",
+               "The current step number.",
+               "getProperty('curStep')"
+          ],
+          [
+               "curBeat",
+               "The current beat number.",
+               "getProperty('curBeat')"
+          ],
+          [
+               "curSection",
+               "The current number.",
+               "getProperty('curSection')"
+          ],
+          [
+               "curDecStep",
+               "The current decimal step number.",
+               "getProperty('curDecStep')"
+          ],
+          [
+               "curDecBeat",
+               "The current decimal beat number.",
+               "getProperty('curDecBeat')"
+          ],
+          [
+               "score",
+               "The current song score.",
+               "getProperty('songScore')"
+          ],
+          [
+               "hits",
+               "The current note hits.",
+               "getProperty('songHits')"
+          ],
+          [
+               "misses",
+               "The current song misses.",
+               "getProperty('songMisses')"
+          ],
+          [
+               "ghostMisses",
+               "The current song ghost misses.",
+               "getProperty('ghostMisses')"
+          ],
+          [
+               "rating",
+               "The current rating percentage, Goes from <code>0</code> to <code>1</code>.",
+               "getProperty('ratingPercent')"
+          ],
+          [
+               "ratingName",
+               "The current ratings name.",
+               "getProperty('ratingString')"
+          ],
+          [
+               "ratingFC",
+               "The current ratings combo.",
+               "getProperty('ratingFC')"
+          ],
+          [
+               "inGameOver",
+               "Tells if the player is in the game over screen.",
+               "\"Shortcut doesn't exist!\""
+          ],
+          [
+               "mustHitSection",
+               "Tells if the current section is a <code>Must Hit Section</code> from the Chart Editor.",
+               "\"Shortcut doesn't exist!\""
+          ],
+          [
+               "altAnim",
+               "Tells if the current section is a <code>Alt Animation Section</code> from the Chart Editor.",
+               "\"Shortcut doesn't exist!\""
+          ],
+          [
+               "gfSection",
+               "Tells if the current section is a <code>GF Section</code> from theChart Editor.",
+               "\"Shortcut doesn't exist!\""
+          ],
+          [
+               "healthGainMult",
+               "The current health gain of hitting a note.",
+               "getProperty('healthGainMult')"
+          ],
+          [
+               "healthLossMult",
+               "The current health loss of missing a note.",
+               "getProperty('healthLossMult')"
+          ],
+          [
+               "playbackRate",
+               "The current playback rate on the song.",
+               "getProperty('playbackRate')"
+          ],
+          [
+               "instakillOnMiss",
+               "If you missed a note you die.",
+               "getProperty('instakillOnMiss')"
+          ],
+          [
+               "botPlay",
+               "Tells if botplay is enabled.",
+               "getProperty('cpuControlled')"
+          ],
+          [
+               "practice",
+               "Tells if practice is enabled.",
+               "getProperty('practiceMode')"
+          ],
+          [
+               "version",
+               "The version of Psych Engine that is currently in.",
+               "getPropertyFromClass('MainMenuState', 'psychEngineVersion')"
+          ]
+     ],
+     "Data_Strums": [
+          [
+               "defaultPlayerStrumX0",
+               "Players default <ins>left arrow X</ins>."
+          ],
+          [
+               "defaultPlayerStrumX1",
+               "Players default <ins>down arrow X</ins>."
+          ],
+          [
+               "defaultPlayerStrumX2",
+               "Players default <ins>up arrow X</ins>."
+          ],
+          [
+               "defaultPlayerStrumX3",
+               "Players default <ins>right arrow X</ins>."
+          ],
+          [
+               "defaultPlayerStrumY0",
+               "Players default <ins>left arrow Y</ins>."
+          ],
+          [
+               "defaultPlayerStrumY1",
+               "Players default <ins>down arrow Y</ins>."
+          ],
+          [
+               "defaultPlayerStrumY2",
+               "Players default <ins>up arrow Y</ins>."
+          ],
+          [
+               "defaultPlayerStrumY3",
+               "Players default <ins>right arrow Y</ins>."
+          ],
+          [
+               "defaultOpponentStrumX0",
+               "Opponents default <ins>left arrow X</ins>."
+          ],
+          [
+               "defaultOpponentStrumX1",
+               "Opponents default <ins>down arrow X</ins>."
+          ],
+          [
+               "defaultOpponentStrumX2",
+               "Opponents default <ins>up arrow X</ins>."
+          ],
+          [
+               "defaultOpponentStrumX3",
+               "Opponents default <ins>right arrow Y</ins>."
+          ],
+          [
+               "defaultOpponentStrumY0",
+               "Opponents default <ins>left arrow Y</ins>."
+          ],
+          [
+               "defaultOpponentStrumY1",
+               "Opponents default <ins>down arrow Y</ins>."
+          ],
+          [
+               "defaultOpponentStrumY2",
+               "Opponents default <ins>up arrow Y</ins>."
+          ],
+          [
+               "defaultOpponentStrumY3",
+               "Opponents default <ins>right arrow Y</ins>."
+          ],
+          [
+               "defaultBoyfriendX",
+               "Players default X position, defined by the stages <code>json</code> file."
+          ],
+          [
+               "defaultBoyfriendY",
+               "Players default Y position, defined by the stages <code>json</code> file."
+          ],
+          [
+               "defaultOpponentX",
+               "Opponents default X position, defined by the stages <code>json</code> file."
+          ],
+          [
+               "defaultOpponentY",
+               "Opponents default Y position, defined by the stages <code>json</code> file."
+          ],
+          [
+               "defaultGirlfriendX",
+               "Girlfriends default X position, defined by the stages <code>json</code> file."
+          ],
+          [
+               "defaultGirlfriendY",
+               "Girlfriends default Y position, defined by the stages <code>json</code> file."
+          ]
+     ],
+     "Data_Pref": [
+          [
+               "downscroll",
+               "Checks if the player notes are in downscroll.",
+               "getPropertyFromClass('ClientPrefs', 'downscroll')"
+          ],
+          [
+               "middlescroll",
+               "Checks if the player notes are in the centerfield.",
+               "getPropertyFromClass('ClientPrefs', 'middlescroll')"
+          ],
+          [
+               "opponentStrums",
+               "Checks the opponents strums visibility.",
+               "getPropertyFromClass('ClientPrefs', 'opponentStrums')"
+          ],
+          [
+               "framerate",
+               "Checks the current framerate on the game.",
+               "getPropertyFromClass('ClientPrefs', 'framerate')"
+          ],
+          [
+               "ghostTapping",
+               "Checks if ghost tapping is enabled.",
+               "getPropertyFromClass('ClientPrefs', 'ghostTapping')"
+          ],
+          [
+               "hideHud",
+               "Checks if the accuracy bar, icons, and health bar is hidden.",
+               "getPropertyFromClass('ClientPrefs', 'hideHud')"
+          ],
+          [
+               "hideTime",
+               "Checks if the time bar is hidden.",
+               "getPropertyFromClass('ClientPrefs', 'hideTime')"
+          ],
+          [
+               "timeBarType",
+               "Checks the time bar displayed.",
+               "getPropertyFromClass('ClientPrefs', 'timeBarType')"
+          ],
+          [
+               "cameraZoomOnBeat",
+               "Checks the camera zoom on beat.",
+               "getPropertyFromClass('ClientPrefs', 'cameraZooms')"
+          ],
+          [
+               "flashingLights",
+               "Checks if the song has flashing lights. <i>(Recommended to disable it, if you have epilepsy!)</i>",
+               "getPropertyFromClass('ClientPrefs', 'flashing')"
+          ],
+          [
+               "lowQuality",
+               "Checks if the song is low quality. <i>(Recommended to enable it, if you have a potato computer)</i>",
+               "getPropertyFromClass('ClientPrefs', 'noteOffset')"
+          ],
+          [
+               "noteOffset",
+               "Checks the note offset in milliseconds, Goes from <code>0</code> to <code>500</code>.",
+               "getPropertyFromClass('ClientPrefs', 'noteOffset')"
+          ],
+          [
+               "noResetButton",
+               "Checks if the reset button is activated.",
+               "pertyFromClass('ClientPrefs', 'noReset')"
+          ],
+          [
+               "healthBarAlpha",
+               "Checks the alpha/opacity of the health bar.",
+               "getPropertyFromClass('ClientPrefs', 'healthBarAlpha')"
+          ],
+          [
+               "healthBarAlpha",
+               "Checks the alpha/opacity of the health bar.",
+               "getPropertyFromClass('ClientPrefs', 'healthBarAlpha')"
+          ],
+          [
+               "scoreZoom",
+               "Checks if the score is being zoom when hitting a note.",
+               "getPropertyFromClass('ClientPrefs', 'scoreZoom')"
+          ],
+          [
+               "shadersEnabled",
+               "Checks if the shaders is enabled. <i>(Recommended to disable it, if you have motion sickness!)</i>",
+               "getPropertyFromClass('ClientPrefs', 'shaders')"
+          ],
+          [
+               "scriptName",
+               "Checks the script name that is running in game.",
+               "\"Shortcut doesn't exist!\""
+          ],
+          [
+               "buildTarget",
+               "Checks the build target of Psych Engine.",
+               "\"Shortcut doesn't exist!\""
+          ]
+     ],
+     "Data_Misc": [
+          [
+               "cameraX",
+               "The current x position of camera.",
+               "getProperty('camFollowPos.x')"
+          ],
+          [
+               "cameraY",
+               "The current y position of camera.",
+               "getProperty('camFollowPos.y')"
+          ],
+          [
+               "screenWidth",
+               "The current width of the window.",
+               "getPropertyFromClass('FlxG', width)"
+          ],
+          [
+               "screenHeight",
+               "The current heigth of the window.",
+               "getPropertyFromClass('FlxG', heigth)"
+          ],
+          [
+               "boyfriendName",
+               "The name of the boyfriend character.",
+               "getProperty('SONG.player1')"
+          ],
+          [
+               "dadName",
+               "The name of the dad character.",
+               "getProperty('SONG.player2')"
+          ],
+          [
+               "gfName",
+               "The name of the girlfriend character",
+               "getProperty('SONG.gfVersion')"
+          ]
+     ]
+}

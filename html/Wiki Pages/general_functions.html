@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title> PsychWikiSite - General Functions </title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="color-scheme" content="dark">
+          <link rel="icon" href="../../images/Psych.png">
+          <link rel="stylesheet" href="../../css/TopNaviMenu.css">
+          <link rel="stylesheet" href="../../css/Wiki Pages/Main Format.css">
+          <link rel="stylesheet" href="../../css/Wiki Pages/Code Format.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script defer type="module" src="../../javascript/Wiki Pages/Wiki Format.js"></script>
+          <script defer type="module" src="../../javascript/ThemeMode.js"></script>
+     </head>
+     <body>
+          <nav id="top">
+               <img src="../../images/Psych.png">
+               <p> PsychWikiSite </p>
+               <ul>
+                    <li><a href="../../index.html">
+                         <i class="fa fa-home"></i> Home </a>
+                    </li>
+                    <li><a href="../Menu/Settings.html">
+                         <i class="fa fa-cogs"></i> Settings </a>
+                    </li>
+                    <li><a href=".">
+                         <i class="fa fa-ellipsis-h"></i> Credits </a>
+                    </li>
+                    <li><a href="https://github.com/Meme1079/PsychWikiSite">
+                         <i class="fa fa-github"></i> Github </a>
+                    </li>
+               </ul>
+          </nav>
+          <main id="wiki">
+               <p style="font-size: 35px; position: relative; top: 10px;"> Lua Script API: General Functions </p>
+               <p style="font-size: 15px; position: relative; bottom: 20px;"> Meme1079 edited this page on 11/28/2022</p>
+               <div class="fake-hr-thin2"></div>
+               <h1> Character Functions </h1>
+                    <section>
+                         <h3> characterDance(character:String) </h3>
+                         <p> Makes character do the idle dance. </p>
+                         <ul>
+                              <li>
+                                   <code>character</code> - The name of the character to be used, can be <code>boyfriend</code>, <code>dad</code> or <code>gf</code>.
+                              </li>
+                         </ul>
+                    <h3> setCharacterX(type:String, value:Float) </h3>
+                         <p> 
+                              Sets the current <ins>x position value</ins> of a character to a new value. 
+                              This will also move all precached characters from the same type into the position you want.
+                         </p>
+                         <ul>
+                              <li>
+                                   <code>type</code> - The character name to be used, can be <code>boyfriend</code>, <code>dad</code> or <code>gf</code>.
+                              </li>
+                              <li>
+                                   <code>value</code> - The new x value of the character position.
+                              </li>
+                         </ul>
+                    <h3> setCharacterY(type:String, value:Float) </h3>
+                         <p>
+                              Sets the current <ins>y position value</ins> of a character to a new value. 
+                              This will also move all precached characters from the same type into the position you want.
+                         </p>
+                         <ul>
+                              <li>
+                                   <code>type</code> - The character name to be used, can be <code>boyfriend</code>, <code>dad</code> or <code>gf</code>.
+                              </li>
+                              <li>
+                                   <code>value</code> - The new y value of the character position.
+                              </li>
+                         </ul>
+                    <h3> getCharacterX(type:String) </h3>
+                         <p> Gets the current <ins>x position value</ins> of a character. </p>
+                         <ul>
+                              <li>
+                                   <code>type</code> - The character name to be used, can be <code>boyfriend</code>, <code>dad</code> or <code>gf</code>.
+                              </li>
+                         </ul>
+                    <h3> getCharacterY(type:String) </h3>
+                         <p> Gets the current <ins>y position value</ins> of a character. </p>
+                         <ul>
+                              <li>
+                                   <code>type</code> - The character name to be used, can be <code>boyfriend</code>, <code>dad</code> or <code>gf</code>.
+                              </li>
+                         </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Accuracy Bar Functions </h1>
+                    <section>
+                         <h3> addScore(value:Int = 0) </h3>
+                              <p> Adds the <code>value</code> parameter to the current <ins>song score total</ins> and recalculates the rating. </p>
+                         <h3> addMisses(value:Int = 0) </h3>
+                              <p> Adds the <code>value</code> parameter to the current <ins>song miss total</ins> and recalculates the rating. </p>
+                         <h3> addHits(value:Int = 0) </h3>
+                              <p> Adds the <code>value</code> parameter to the current <ins>song hit total</ins> and recalculates the rating. </p>
+                         <h3> addHealth(value:Float = 0) </h3>
+                              <p> Adds the <code>value</code> parameter to the current <ins>song health total</ins> and recalculates the rating. </p>
+                         <div class="fake-hr-thick"></div>
+                         <h3> setScore(value:Int = 0) </h3>
+                              <p> Sets the <code>value</code> parameter of the current <ins>song score total</ins> with a new value and recalculates the rating. </p>
+                         <h3> setMisses(value:Int = 0) </h3>
+                              <p> Sets the <code>value</code> parameter of the current <ins>song miss total</ins> with a new value and recalculates the rating. </p>
+                         <h3> setHits(value:Int = 0) </h3>
+                              <p> Sets the <code>value</code> parameter of the current <ins>song hit total</ins> with a new value and recalculates the rating. </p>
+                         <h3> setHealth(value:Int = 0) </h3>
+                              <p> Sets the <code>value</code> parameter of the current <ins>song health total</ins> with a new value and recalculates the rating. </p>
+                         <div class="fake-hr-thick"></div>
+                         <h3> setRatingPercent(value:Float) </h3>
+                              <p> Sets the current <ins>rating percent</ins> to a new value, in case you want to do your own rating calculation. </p>
+                              <ul>
+                                   <li>
+                                        <code>value</code> - The new accuracy rating percent, Goes from <code>0</code> to <code>1</code>.
+                                   </li>
+                              </ul>
+                         <h3> setRatingString(value:String) </h3>
+                              <p> Sets the current <ins>rating name</ins> to a new value, in case you want to do your own rating calculation. </p>
+                              <ul>
+                                   <li>
+                                        <code>value</code> - The new rating string name.
+                                   </li>
+                              </ul>
+                         <h3> setRatingFC(value:String) </h3>
+                              <p> Sets the current <ins>rating combo name</ins> to a new value. </p>
+                              <ul>
+                                   <li>
+                                        <code>value</code> - The new rating combo name.
+                                   </li>
+                              </ul>
+                         <div class="fake-hr-thick"></div>
+                         <h3> getScore() </h3>
+                              <p> Gets the current <ins>songs score total</ins> current value. </p>
+                         <h3> getMisses() </h3>
+                              <p> Gets the current <ins>songs miss total</ins> current value. </p>
+                         <h3> getHits() </h3>
+                              <p> Gets the current <ins>songs hit total</ins> current value. </p>
+                         <h3> getHealth() </h3>
+                              <p> Gets the current <ins>songs health total</ins> current value. </p>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Lua Object Exists </h1>
+                    <section>
+                         <h3> luaSpriteExists(tag:String) </h3>
+                              <p> Checks if the current <ins>lua sprite object</ins> exists in the currently playing song. </p>
+                              <ul>
+                                   <li>
+                                        <code>tag</code> - The tag of the lua sprite object.
+                                   </li>
+                              </ul>
+                         <h3> luaTextExists(tag:String) </h3>
+                              <p> Checks if the current <ins>lua text object</ins> exists in the currently playing song. </p>
+                              <ul>
+                                   <li>
+                                        <code>tag</code> - The tag of the lua text object.
+                                   </li>
+                              </ul>
+                         <h3> luaSoundExists(tag:String) </h3>
+                              <p> Checks if the current <ins>lua sound object</ins> exists in the currently playing song. </p>
+                              <ul>
+                                   <li>
+                                        <code>tag</code> - The tag of the lua sound object.
+                                   </li>
+                              </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> String Functions </h1>
+                    <section>
+                         <h3> stringStartsWith(str:String, start:String) </h3>
+                              <p> Checks the <ins>starting section</ins> of the <b>String</b> variable. </p>
+                              <ul>
+                                   <li>
+                                        <code>str</code> - The <b>String</b> variable to be used.
+                                   </li>
+                                   <li>
+                                        <code>start</code> - The starting section.
+                                   </li>
+                              </ul>
+                         <h3> stringEndsWith(str:String, end:String) </h3>
+                              <p> Checks the <ins>ending section</ins> of the <b>String</b> variable. </p>
+                              <ul>
+                                   <li>
+                                        <code>str</code> - The string variable to be used.
+                                   </li>
+                                   <li>
+                                        <code>end</code> - The ending section.
+                                   </li>
+                              </ul>
+                         <h3> stringSplit(str:String, split:String) </h3>
+                              <div class="fake-horizontal-blue">
+                                   <blockquote>
+                                        <span class="fa fa-info-circle blue"></span> <span class="blue">Note</span>:
+                                        <span><em>
+                                             After splitting a <b>String</b> it will act like a <b>Table</b>; example shown below for reference.
+                                        </em></span>
+                                   </blockquote>
+                              </div>
+                              <p> Will split the <b>String</b> variable into multiple <b>Strings</b>. </p>
+                              <ul>
+                                   <li>
+                                        <code>str</code> - The string variable to be split.
+                                   </li>
+                                   <li>
+                                        <code>split</code> - The separation of the string.
+                                   </li>
+                              </ul>
+                              <div class="fake-horizontal-green">
+                                   <blockquote>
+                                        <span class="fa fa-code green"></span> <span class="green">Example</span>:
+                                        <span>
+                                             <code>stringSplit('Split, This, LOL!', ', ')[1]</code> This will print 'Split'. 
+                                        </span>
+                                   </blockquote>
+                              </div>
+                         <h3> stringTrim(str:String) </h3>
+                              <p> Will remove any unnecessary large spaces from the <b>Strings</b> variable. </p>
+                              <ul>
+                                   <li>
+                                        <code>str</code> - The string variable to be trimmed.
+                                   </li>
+                              </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Randomizers </h1>
+                    <section>
+                         <h3> getRandomInt(min:Int, max:Int) </h3>
+                              <p> This will randomize a <ins><b>Int</b> number</ins>. <i>(Better than <code>math.random()</code> ngl)</i> </p>
+                              <ul>
+                                   <li>
+                                        <code>min</code> - The lowest value.
+                                   </li>
+                                   <li>
+                                        <code>max</code> - The highest value.
+                                   </li>
+                              </ul>
+                         <h3> getRandomFloat(min:Float, max:Float) </h3>
+                              <p> This will randomize a <ins><b>Float</b> number</ins>. </p>
+                              <ul>
+                                   <li>
+                                        <code>min</code> - The lowest value.
+                                   </li>
+                                   <li>
+                                        <code>max</code> - The highest value.
+                                   </li>
+                              </ul>
+                         <h3> getRandomBool(chance:Float = 50) </h3>
+                              <p> This will randomize the chance of it being <code>true</code>. </p>
+                              <ul>
+                                   <li>
+                                        <code>chance</code> - The possibility of it being <code>true</code>.
+                                   </li>
+                              </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> File Functions </h1>
+                    <section>
+                         <h3> getTextFromFile(path:String) </h3>
+                              <p> Gets the text contents inside of the <code>txt</code> file. </p>
+                              <ul>
+                                   <li>
+                                        <code>path</code> - The path file to the <code>txt</code> file.
+                                   </li>
+                              </ul>
+                    <h3> directoryFileList(folder:String) </h3>
+                         <p> Gets the file folders inside of a folder </p>
+                         <ul>
+                              <li>
+                                   <code>folder</code> - The path to the file folder.
+                              </li>
+                         </ul>
+                    <h3> checkFileExists(filename:String, ?absolute:Bool = false) </h3>
+                         <p> Checks if the file existed or not. </p>
+                         <ul>
+                              <li>
+                                   <code>filename</code> - The path of the file to be checked if it exists.
+                              </li>
+                              <li>
+                                   <code>absolute</code> - An optional parameter, It will be ignore by the mod folder directory, causing it to be outside the mod folder.
+                              </li>
+                         </ul>                         
+                    <h3> saveFile(path:String, content:String, ?absolute:Bool = false) </h3>
+                         <p> Changes the current file contents and then saves it. </p>
+                         <ul>
+                              <li>
+                                   <code>path</code> - The path of the file to be changed.
+                              </li>
+                              <li>
+                                   <code>content</code> - The file contents to be changed or modified, use double brackets <code>[[]]</code>.
+                              </li>
+                              <li>
+                                   <code>absolute</code> - An optional parameter, It will be ignore by the mod folder directory, causing it to be outside the mod folder.
+                              </li>
+                         </ul>                               
+                    <h3> deleteFile(path:String) </h3>
+                         <p> Deletes the current file. </p>
+                         <ul>
+                              <li>
+                                   <code>path</code> - The path of the file to be changed.
+                              </li>
+                         </ul>
+                    <h3> isRunning(luaFile:String) </h3>
+                         <p> Checks if any lua file are currently running in game. </p>
+                         <ul>
+                              <li>
+                                   <code>luaFile</code> - The path of the lua file to be used.
+                              </li>
+                         </ul>
+                    <h3> getRunningScripts() </h3>
+                         <p> Checks if any multiple lua file are currently running in game. </p>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Scripts Functions </h1>
+                    <section>
+                         <h3> addLuaScript(path:String, ?ignoreAlreadyRunning:Bool = false) </h3>
+                              <p> <ins>Adds a lua script</ins> in the game. </p>
+                              <ul>
+                                   <li>
+                                        <code>path</code> - The path of the lua file that you are getting.
+                                   </li>
+                                   <li>
+                                        <code>ignoreAlreadyRunning</code> - An optional parameter, It will run again while ignoring the lua file that is currently running.
+                                   </li>
+                              </ul>
+                         <h3> removeLuaScript(path:String) </h3>
+                              <p> <ins>Removes a lua script</ins> in the game. </p>
+                              <ul>
+                                   <li>
+                                        <code>path</code> - The path of the lua file that you are getting.
+                                   </li>
+                              </ul>
+                         <h3> addHaxeLibrary(libName:String, ?libPackage:String = '') </h3>
+                              <p> Adds a haxe library variable into the interpreter. </p>
+                              <ul>
+                                   <li>
+                                        <code>libName</code> - The haxe library to be used.
+                                   </li>
+                                   <li>
+                                        <code>libPackage</code> - An optional parameter, the haxe library package to be used.
+                                   </li>
+                              </ul>
+                              <div class="fake-horizontal-green">
+                                   <blockquote>
+                                        <span class="fa fa-code green"></span> <span class="green">Example</span>:
+                                        <span>
+                                             <code>addHaxeLibrary('FlxTween', 'flixel.tweens')</code>
+                                        </span>
+                                   </blockquote>
+                              </div>
+                         <h3> runHaxeCode(codeToRun:String) </h3>
+                              <p> Runs haxe script inside of the lua file. </p>
+                              <ul>
+                                   <li>
+                                        <code>codeToRun</code> - The code to be run, use double brackets <code>[[]]</code>.
+                                   </li>
+                              </ul>
+                         <h3> openCustomSubstate(name:String, pauseGame:Bool = false) </h3>
+                              <p> <ins>Opens</ins> your custom substate. </p>
+                              <ul>
+                                   <li>
+                                        <code>name</code> - The name of the custom substate to be used.
+                                   </li>
+                                   <li>
+                                        <code>pauseGame</code> - An optional parameter, will pause your game after the custom substate has been opened.
+                                   </li>
+                              </ul>
+                         <h3> closeCustomSubstate() </h3>
+                              <p> <ins>Closes</ins> any custom substate. </p>
+                         <div class="fake-hr-thick"></div>
+                         <div class="fake-horizontal-gold">
+                              <blockquote>
+                                   <span class="fa fa-exclamation-triangle gold"></span> <span class="gold">Warning</span>:
+                                   <span><em>
+                                        This section of the wiki has broken functions meaning they wont work as intended.
+                                   </em></span>
+                              </blockquote>
+                         </div>
+                         <h3> setGlobalFromScript(luaFile:String, global:String, val:Dynamic) </h3>
+                              <p> 
+                                   <ins>Sets the current <b>Global</b> variable</ins> with a new value from another lua script. 
+                                   If you're getting a <b>Local</b> variable <ins>it will not work as you intened</ins>.
+                              </p>
+                              <ul>
+                                   <li>
+                                        <code>luaFile</code> - The path of the lua file that you are getting.
+                                   </li>
+                                   <li>
+                                        <code>global</code> - The variable to be set.
+                                   </li>
+                                   <li>
+                                        <code>val</code> - The new value to be set.
+                                   </li>
+                              </ul>
+                         <h3> getGlobalFromScript(luaFile:String, global:String) </h3>
+                              <p>
+                                   <ins>Gets the current <b>Global</b> variable</ins> current value from another lua script. 
+                                   If you're getting a <b>Local</b> variable <ins>it will not work as you intened</ins>.
+                              </p>
+                              <ul>
+                                   <li>
+                                        <code>luaFile</code> - The path of the lua file that you are getting.
+                                   </li>
+                                   <li>
+                                        <code>global</code> - The variable to be set.
+                                   </li>
+                              </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Camera Functions </h1>
+                    <section>
+                         <h3> cameraSetTarget(target:String) </h3>
+                              <p> Makes the <ins>camera focus</ins> on the target. </p>
+                              <ul>
+                                   <li>
+                                        <code>target</code> - The character type to target, can be either <code>boyfriend</code> or <code>dad</code>.
+                                   </li>
+                              </ul>
+                         <h3> cameraShake(camera:String, intensity:Float, duration:Float) </h3>
+                              <p> Makes the <ins>camera shake</ins>. </p>
+                              <ul>
+                                   <li>
+                                        <code>camera</code> - The camera state to be set in, Can be either <code>camGame</code>, <code>camHUD</code> or <code>camOther</code>.
+                                   </li>
+                                   <li>
+                                        <code>intensity</code> - How much intesity will the camera shake, Recommended value is <code>0.05</code>.
+                                   </li>
+                                   <li>
+                                        <code>duration</code> - How long will the camera shake last.                                   
+                                   </li>
+                              </ul>
+                         <h3> cameraFlash(camera:String, color:String, duration:Float, forced:Bool) </h3>
+                              <p> Makes the <ins>camera flash</ins>. </p>
+                              <ul>
+                                   <li>
+                                        <code>camera</code> - The camera state to be set in, Can be either <code>camGame</code>, <code>camHUD</code> or <code>camOther</code>.
+                                   </li>
+                                   <li>
+                                        <code>color</code> - The hexadecimal color of the flash.
+                                   </li>
+                                   <li>
+                                        <code>duration</code> - How long will the camera shake last.                                   
+                                   </li>
+                                   <li>
+                                        <code>forced</code> - If set to <code>true</code>, then the flash will be reset.                                   
+                                   </li>
+                              </ul>
+                         <h3> cameraFade(camera:String, color:String, duration:Float, forced:Bool) </h3>
+                              <p> Makes the <ins>camera fade</ins>. </p>
+                              <ul>
+                                   <li>
+                                        <code>camera</code> - The camera state to be set in, Can be either <code>camGame</code>, <code>camHUD</code> or <code>camOther</code>.
+                                   </li>
+                                   <li>
+                                        <code>color</code> - The hexadecimal color of the fade.
+                                   </li>
+                                   <li>
+                                        <code>duration</code> - How long will the camera fade last.                                   
+                                   </li>
+                                   <li>
+                                        <code>forced</code> - If set to <code>true</code>, then the fade will be reset.                                   
+                                   </li>
+                              </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Debuging Functions </h1>
+                    <section>
+                         <h3> debugPrint(text1, text2, text3, text4, text5) </h3>
+                              <p>
+                                   This will display a debug message in the top-left corner of the screen. 
+                                   <ins>All of the parameters are optional</ins> execept <code>text1</code> parameter. 
+                                   The purpose of the function is to <ins>check the current value of the object or variable</ins>.
+                              </p>
+                              <div class="fake-horizontal-green">
+                                   <blockquote>
+                                        <span class="fa fa-code green"></span> <span class="green">Example</span>:
+                                        <span>
+                                             <code>debugPrint("Current boyfriend character: ", getProperty('boyfriend.curCharacter')</code> 
+                                             This will get the current bf character with the <code>getProperty()</code> function and will print 
+                                             <code>Current boyfriend character: 'bf'</code>.
+                                        </span>
+                                   </blockquote>
+                              </div>
+                         <h3> close() </h3>
+                              <div class="fake-horizontal-gold">
+                                   <blockquote>
+                                        <span class="fa fa-exclamation-triangle gold"></span> <span class="gold">Warning</span>:
+                                        <span><em>
+                                             You must use this inside of a <code>Stage script</code>, since it will not be used anywhere.
+                                        </em></span>
+                                   </blockquote>
+                              </div>
+                              <p> Stops your script in the next 100 milliseconds. </p>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Other Functions </h1>
+                    <section>
+                         <h3> triggerEvent(name:String, arg1:String, arg2:String) </h3>
+                              <p> Triggers an event without having to insert the event into the chart editor. </p>
+                              <ul>
+                                   <li>
+                                        <code>name</code> - The name of the event in the Chart editor.
+                                   </li>
+                                   <li>
+                                        <code>arg1</code> - The value on Value 1.
+                                   </li>
+                                   <li>
+                                        <code>arg2</code> - The value on Value 2.
+                                   </li>
+                              </ul>
+                         <h3> setHealthBarColors(leftHex:String, rightHex:String) </h3>
+                              <p> Changes the <ins>health bar</ins> colors. </p>
+                              <ul>
+                                   <li>
+                                        <code>leftHex</code> - The opponent hexadecimal color of the health bar.
+                                   </li>
+                                   <li>
+                                        <code>rightHex</code> - The player hexadecimal color of the health bar.
+                                   </li>
+                              </ul>
+                         <h3> setTimeBarColors(leftHex:String, rightHex:String) </h3>
+                              <p> Changes the <ins>time bar</ins> colors. </p>
+                              <ul>
+                                   <li>
+                                   <code>leftHex</code> - The hexadecimal color of the time bar.
+                              </li>
+                              <li>
+                                   <code>rightHex</code> - The background hexadecimal color of the time bar.
+                              </li>
+                         </ul>
+                         <h3> getColorFromHex(color:String) </h3>
+                              <p> 
+                                   Gets the specific color from the Hexadecimal color. Expecially when setting/getting a specific color, 
+                                   really useful to be honest. 
+                              </p>
+                              <ul>
+                                   <li>
+                                        <code>color</code> - The hexadecimal color to be used.
+                                   </li>
+                              </ul>
+                         <h3> getSongPosition() </h3>
+                              <p> Returns the current song position, Shortcut to <code>getPropertyClass('Conductor', 'songPosition')</code>. </p>
+                    </section>
+          </main>
+     </body>
+</html>

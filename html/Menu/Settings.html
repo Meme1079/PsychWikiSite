@@ -6,20 +6,20 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <meta name="color-scheme" content="dark">         <!-- Epic dark theme -->
           <link rel="icon" href="../../images/Psych.png">   <!-- The Favicon -->
-          <link rel="stylesheet" href="../../css/Wiki Page/Format.css">   <!-- The Main Wiki Format -->
-          <link rel="stylesheet" href="../../css/Menu/Setting.css">       <!-- The Menu Format -->
+          <link rel="stylesheet" href="../../css/Wiki Pages/Main Format.css">   <!-- The Main Wiki Format -->
+          <link rel="stylesheet" href="../../css/Menu/Settings.css">       <!-- The Menu Format -->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <script defer src="../../javascript/Menu/Setting.js"></script>  <!-- The Main Setting Code Stuff -->
+          <script defer type="module" src="../../javascript/Menu/SiteThemeCode.js"></script> <!-- The Main Setting Code Stuff -->
      </head>
      <body>
-          <button class="icon-bgBack" onclick="history.back()">
+          <button id="icon-bgBack" onclick="history.back()">
                <div class="icon fa" style="position: relative; right: 0.05cm;">&#xf0d9;</div>
           </button>
           <main>
                <section>
-                    <div class="setting" style="height: 10cm;">
+                    <div class="setting">
                          <div class="icon-bg">
-                              <div class="icon fa" style="cursor: defualt;">&#xf108;</div>
+                              <div class="icon fa">&#xf108;</div>
                          </div>
                          <div class="description">
                               <p class="sup-desc"> Preference Site Themes </p>
@@ -27,12 +27,12 @@
                          </div>
                          <div class="line-hr"></div>
                          <section>
-                              <div class="displayBG">
-                                   <div class="displayHead"></div>
-                                   <div class="displayHeadDesc"></div>
-                                   <div class="displayHeadLine"></div>
-                                   <div class="displayH1"></div>
-                                   <div class="displayH1Line"></div>
+                              <div id="displayBG">
+                                   <div id="displayHead"></div>
+                                   <div id="displayHeadDesc"></div>
+                                   <div id="displayHeadLine"></div>
+                                   <div id="displayH1"></div>
+                                   <div id="displayH1Line"></div>
                                    <div class="displayH3"></div>
                                    <div class="displayDesc"></div>
                                    <div style="position: relative; top: 0.5cm;">
@@ -43,57 +43,45 @@
                                         <div class="displayH3"></div>
                                         <div class="displayDesc"></div>
                                    </div>
-                                   <div class="displayThickLine"></div>
+                                   <div id="displayThickLine"></div>
                               </div>
                          </section>
                          <section>
                               <div class="optionBG">
-                                   <button class="optionIconBG" onclick="changeLightTheme()">
+                                   <button id="light" class="optionIconBG">
                                         <div class="fa" style="font-size: 25px;">&#xf0eb;</div>
                                    </button>
                                    <p class="titleOption"> Light High Contrast Theme </p>
                               </div>
                               <div class="optionBG">
-                                   <button class="optionIconBG" onclick="changeDarkTheme()" style="border: green solid 1.5px;">
+                                   <button id="dark" class="optionIconBG" style="border: green solid 1.5px;">
                                         <div class="fa" style="font-size: 25px;">&#xf186;</div>
                                    </button>
                                    <p class="titleOption"> Dark High Contrast Theme </p>
                               </div>
                               <div class="optionBG">
-                                   <button class="optionIconBG" onclick="changeDimmedTheme()">
+                                   <button class="optionIconBG">
                                         <div class="fa" style="font-size: 25px;">&#xf123;</div>
                                    </button>
                                    <p class="titleOption"> Dark Dimmed Theme </p>
                               </div>
                          </section>
                     </div>
-                    <!-- <div class="setting" style="top: 7.3cm; height: 10cm;">
-                         <button class="icon-bg">
-                              <div class="icon fa">&#xf121;</div>
-                         </button>
+                    <div class="setting" style="left: 20cm;">
+                         <div class="icon-bg">
+                              <div class="icon fa" style="bottom: 19px; right: 7px;">&#xf121;</div>
+                         </div>
                          <div class="description">
-                              <p class="sup-desc"> Color Code Theme </p>
-                              <p class="sub-desc" style="left: 1px;"> Changes the code color theme </p>
+                              <p class="sup-desc"> Code Color Scheme </p>
+                              <p class="sub-desc"> Changes the code color </p>
                          </div>
                          <div class="line-hr"></div>
-                         <p class="code-title"> Github Dark High Contrast </p>
-                         <div class="code">
-<pre style="color: white;">
-<span id="code-keyword1">function</span> <span id="code-function">mySplit</span>(<span id="code-parameter">inputstr</span>, <span id="code-parameter">sep</span>)
-     <span id="code-keyword1">local</span> <span id="code-variable">t</span> <span id="code-keyword1">=</span> {}
-     <span id="code-keyword1">if</span> <span id="code-variable">sep</span> <span id="code-keyword1">==</span> <span id="code-keyword2">nil</span> <span id="code-keyword1">then</span>
-          <span id="code-variable">sep</span> <span id="code-keyword1">=</span> <span id="code-string">"%s"</span>
-     <span id="code-keyword1">end</span>
-
-     <span id="code-keyword1">for</span> <span id="code-variable">str</span> <span id="code-keyword1">in</span> <span id="code-valmani">string</span>.<span id="code-customfunc">gmatch</span>(<span id="code-parameter">inputstr</span>, <span id="code-string">"([^"</span><span id="code-keyword1">..</span><span id="code-parameter">sep</span><span id="code-keyword1">..</span><span id="code-string">"]+)"</span>) <span id="code-keyword1">do</span>
-          <span id="code-valmani">table</span>.<span id="code-customfunc">insert</span>(<span id="code-variable">t</span>, <span id="code-variable">str</span>)
-     <span id="code-keyword1">end</span>
-     <span id="code-keyword1">return</span> <span id="code-variable">t</span>
-<span id="code-keyword1">end</span>
-</pre>
-                         </div>
-                    </div> -->
+                         <section>
+                              <!-- <div id="displayCodeBG">
+                              </div> -->
+                         </section>
+                    </div>
                </section>
-          </body>
-     </main>
+          </main>
+     </body>
 </html>

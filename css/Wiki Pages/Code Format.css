@@ -1,4 +1,4 @@
-main.wiki pre, main pre {
+main#wiki pre, main pre {
      color: white;
      font-family: Menlo; /* Strange it didn't change color, but ok */
      font-size: 0.35cm;
@@ -7,9 +7,9 @@ main.wiki pre, main pre {
      word-break: normal;
 }
 
-main.wiki .code-border, main .code-border {
+main#wiki .code-border, main .code-border {
      outline: #272b33 solid;
-     background-color: #161b22; 
+     background-color: #161b22;
      background-size: 10px 10px;
      border-radius: 5.5px;
      border-width: thin;
@@ -24,22 +24,24 @@ main.wiki .code-border, main .code-border {
      --blue: #91cbff;
      --grey: #bdc4cc;
      --pink: #dbb7ff;
-     --gold: #ffb757;
+     --gold: #ffb14a;
      --aquamarine: #47cab0;
 }
 
-#code-keyword1 { color: var(--red); }
-#code-keyword2 { color: var(--blue); }
-#code-number { color: var(--blue); }
-#code-string { color: var(--blue); }
-#code-comment { color: var(--grey); }
-#code-function { color: var(--pink); }
-#code-customfunc { color: var(--blue); }
-#code-parameter { color: var(--gold); }
-#code-valmani { color: var(--aquamarine); }
-#code-variable { color: var(--white); }
-#code-key { color: var(--blue); }
-#code-value { color: var(--blue); }
+.code-keyword1 { color: var(--red); }
+.code-keyword2 { color: var(--blue); }
+.code-operator1 { color: var(--red) }
+.code-operator2 { color: var(--red) }
+.code-number { color: var(--blue); }
+.code-string { color: var(--blue); }
+.code-comment { color: var(--grey); }
+.code-function { color: var(--pink); }
+.code-customfunc { color: var(--blue); }
+.code-parameter { color: var(--gold); }
+.code-datamani { color: var(--aquamarine); }
+.code-variable { color: var(--white); }
+.code-key { color: var(--blue); }
+.code-value { color: var(--blue); }
 
 #show_text {
      outline: #272b33 solid;

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title> PsychWikiSite - Basics of Coding </title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="color-scheme" content="dark">
+          <link rel="icon" href="../../images/Psych.png">
+          <link rel="stylesheet" href="../../css/TopNaviMenu.css">
+          <link rel="stylesheet" href="../../css/Wiki Pages/Main Format.css">
+          <link rel="stylesheet" href="../../css/Wiki Pages/Code Format.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script defer type="module" src="../../javascript/Wiki Pages/Wiki Format.js"></script>
+          <script defer type="module" src="../../javascript/ThemeMode.js"></script>
+     </head>
+     <body>
+          <nav id="top">
+               <img src="../../images/Psych.png">
+               <p> PsychWikiSite </p>
+               <ul>
+                    <li><a href="../../index.html">
+                         <i class="fa fa-home"></i> Home </a>
+                    </li>
+                    <li><a href="../Menu/Settings.html">
+                         <i class="fa fa-cogs"></i> Settings </a>
+                    </li>
+                    <li><a href=".">
+                         <i class="fa fa-ellipsis-h"></i> Credits </a>
+                    </li>
+                    <li><a href="https://github.com/Meme1079/PsychWikiSite">
+                         <i class="fa fa-github"></i> Github </a>
+                    </li>
+               </ul>
+          </nav>
+          <main id="wiki">
+               <p style="font-size: 35px; position: relative; top: 10px;"> Lua Script API: Basics of Coding </p>
+               <p style="font-size: 15px; position: relative; bottom: 20px;"> Meme1079 edited this page on 11/28/2022</p>
+               <div class="fake-hr-thin2"></div>
+               <h1> Introduction </h1>
+                    <section>
+                         <p>
+                              Lua is a scripting language used in Psych Engine modding. It is very similar to Python but it's more faster to run and more 
+                              simple than Python. The current version of Lua that Psych Engine is using is <code>(5.1)</code>.
+                         </p>
+                         <p>
+                              To create your own Lua file I recommend you download <a href="https://code.visualstudio.com/">VSCode</a> it's available 
+                              in Windows, Mac, and Linux. Now after you download VSCode open it, press <i>[Command + N]</i> this will create a untitled
+                              file. Click the hyperlink that says <i>[Select a language]</i> after that type or search lua on the <i>Select language mode</i>. 
+                              Click Lua and boom you're done.
+                         </p>
+                         <p> 
+                              And to save your Lua file press <i>[Commans + S]</i> choose the file path to be saved and click <i>[Ok]</i>. Examples shown
+                              below the video.
+                         </p>
+                         <video controls>
+                              <source src="../../videos/epictutorial.mp4" type="video/mp4">
+                         </video>
+                         <h3> Difference </h3>
+                              <p> 
+                                   Lua in Psych Engine is very different compared to the original Lua. Mainly when coding first of all you can't put Control Structures 
+                                   for order for them to work properly you have to declared them inside of Callback templates, Example: <code>onCreate()</code>. If you
+                                   want more examples just click the hyperlink.
+                              </p>
+                              <p> 
+                                   Printing in Psych Engine is also different the <code>print()</code> function will be replaced with <code>debugPrint()</code>. The 
+                                   For loop is the only functional loop that can be used. While and Repeat Loops are broken in Psych Engine Lua.
+                              </p>
+                              <p> The Built-in Psych Engine Lua functions can't be placed outside of the Callback templates. </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">var</span> <span class="code-keyword1">=</span> <span class="code-number">5</span>
+     <span class="code-keyword1">if</span> <span class="code-variable">var</span> <span class="code-keyword1">==</span> <span class="code-number">5</span> <span class="code-keyword1">then</span>
+          <span class="code-customfunc">debugPrint</span>(<span class="code-string">'it worked'</span>)
+     <span class="code-keyword1">end</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Variables </h1>
+                    <section>
+                         <p>
+                              Variables in programming is a manipulable storage area that holds the Data type. To create a variable type the name of the variable to be used. 
+                              Between the name and the Data type put the equal sign <code>=</code> after that put the data type you want.
+                         </p>
+                         <p> Example: </p>
+                         <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>() <span class="code-comment">-- The start of lua script</span>
+     <span class="code-keyword1">local</span> <span class="code-variable">greet</span> <span class="code-operator1">=</span> <span class="code-string">'Hello'</span> <span class="code-comment">-- greet variable</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">greet</span>) <span class="code-comment">-- will print 'hello'</span>
+<span class="code-keyword1">end</span>
+</pre>
+                         </div>
+                         <p>
+                              You can do multiple Variables in a single line. In each Variable/Data types they should be separated by a comma <code>,</code>. If there 
+                              is more Variables than Data types it will assign the missing Data types into <code>nil</code>.
+                         </p>
+                         <p> Example: </p>
+                         <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">a</span>, <span class="code-variable">b</span>, <span class="code-variable">c</span> <span class="code-operator1">=</span> <span class="code-number">12</span>, <span class="code-number">14</span>, <span class="code-number">13</span> <span class="code-comment">-- Complete</span> 
+     <span class="code-keyword1">local</span> <span class="code-variable">d</span>, <span class="code-variable">e</span>, <span class="code-variable">f</span> <span class="code-operator1">=</span> <span class="code-number">12</span>, <span class="code-number">14</span>     <span class="code-comment">-- Incomplete Data Types</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">a</span>, <span class="code-variable">b</span>, <span class="code-variable">c</span>) <span class="code-comment">-- will print '12 14 13'</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">d</span>, <span class="code-variable">e</span>, <span class="code-variable">f</span>) <span class="code-comment">-- will print '12 14 nil'</span>
+<span class="code-keyword1">end</span>
+</pre>
+                         </div>
+                         <h3> Naming Variables Rules </h3>
+                              <ul>
+                                   <li> Variable names should start with a letter or underscore <code>_</code> any other letter or character is invalid. </li>
+                                   <li> Variable names can not be named with numbers at the start only works at then middle or end. </li>
+                                   <li> Variable names are not valid if it has a space. </li>
+                                   <li> Lua is case-sensitive so <code>a</code> and <code>A</code> name are considered different variables. </li>
+                                   <li> Variable names can't be named after a keyword or operators, list of keywords are shown below. </li>
+                              </ul>
+                              <p> Reserved Keywords: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-operator2">and</span>       <span class="code-operator2">or</span>       <span class="code-operator2">not</span>       <span class="code-keyword1">local</span>     <span class="code-keyword2">true</span>       <span class="code-keyword1">break</span>
+<span class="code-keyword2">false</span>     <span class="code-keyword2">nil</span>      <span class="code-keyword1">if</span>        <span class="code-keyword1">else</span>      <span class="code-keyword1">elseif</span>     <span class="code-keyword1">goto</span>
+<span class="code-keyword1">then</span>      <span class="code-keyword1">for</span>      <span class="code-keyword1">in</span>        <span class="code-keyword1">repeat</span>    <span class="code-keyword1">until</span>
+<span class="code-keyword1">while</span>     <span class="code-keyword1">do</span>       <span class="code-keyword1">return</span>    <span class="code-keyword1">end</span>       <span class="code-keyword1">function</span>
+</pre>
+                              </div>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-comment">-- Valid --</span>
+
+<span class="code-variable">var</span> <span class="code-operator1">=</span> <span class="code-string">'string1'</span>        <span class="code-comment">-- a variable</span>
+<span class="code-variable">var1</span> <span class="code-operator1">=</span> <span class="code-string">'string2'</span>       <span class="code-comment">-- a variable with a number behind it</span>
+<span class="code-variable">var_name</span> <span class="code-operator1">=</span> <span class="code-keyword2">false</span>       <span class="code-comment">-- a variable with a underscore</span>
+<span class="code-variable">_nameVar</span> <span class="code-operator1">=</span> <span class="code-keyword2">true</span>        <span class="code-comment">-- a variable with a underscore at the start</span>
+<span class="code-variable">var2</span> <span class="code-operator1">=</span> <span class="code-string">'corn'</span><span class="code-keyword1">..</span><span class="code-string">'lover'</span> <span class="code-comment">-- a variable with the operators as a value</span>
+
+<span class="code-comment">-- Invalid --</span>
+
+<span class="code-keyword1">if</span> <span class="code-operator1">=</span> <span class="code-string">'string3'</span>         <span class="code-comment">-- a variable named with a keyword</span>
+<span class="code-operator1">&#62;=</span> <span class="code-operator1">=</span> <span class="code-keyword2">false</span>             <span class="code-comment">-- a variable named with a operator</span>
+<span class="code-number">23</span> <span class="code-operator1">=</span> <span class="code-number">245</span>               <span class="code-comment">-- a variable named with a value</span>
+<span class="code-variable">val</span> <span class="code-number">3</span> <span class="code-operator1">=</span> <span class="code-keyword2">nil</span>            <span class="code-comment">-- a variable with a space</span>
+<span class="code-number">4</span><span class="code-variable">val</span> <span class="code-operator1">=</span> <span class="code-number">245</span>             <span class="code-comment">-- a variable with the number at the start</span>
+</pre>
+                              </div>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Data Types </h1>
+                    <section>
+                         <h3> Strings </h3>
+                              <p>
+                                   Strings are a sequence of texts, they are usually surrounded by single-quote <code>''</code>, double-quote <code>""</code>, and double-brackets <code>[[]]</code>. 
+                                   Single-quote <code>''</code> and double-quotes <code>""</code> are the same when executed. But double-brackets <code>[[]]</code> are use in multiline strings for longer texts example shown below.
+                              </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">str1</span> <span class="code-operator1">=</span> <span class="code-string">'Hello'</span>
+     <span class="code-keyword1">local</span> <span class="code-variable">str2</span> <span class="code-operator1">=</span> <span class="code-string">"World"</span>
+     <span class="code-keyword1">local</span> <span class="code-variable">str3</span> <span class="code-operator1">=</span> <span class="code-string">[[Culturae organicae te 
+     capiet ad loca quae numquam 
+     expectata non visere!]]</span>
+
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">str1</span>)
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">str2</span>)
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">str3</span>)
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                              <p> If you want to add quotes inside of string don't do it. Because Lua will think the string ends there, thus causing an error but you can avoid this problem with escape characters. </p>
+                              <p> Escape character are constructed with a backslash character <code>\</code>. Lua will convert the special character into string characters. </p>
+                              <table id="EscChar">
+                                   <thead>
+                                        <tr>
+                                             <td class="tab-symb"> Escape Character </td>
+                                             <td class="tab-name"> Description </td>
+                                             <td class="tab-synt"> Example </td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>\'</code></td>
+                                             <td class="tab-name"> Single-quote </td>
+                                             <td class="tab-synt"><code> 'The \'singe-quote\'' </code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>\"</code></td>
+                                             <td class="tab-name"> Double-quote </td>
+                                             <td class="tab-synt"><code> "The \"double-quote\"" </code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>\[</code></td>
+                                             <td class="tab-name"> Left Bracket </td>
+                                             <td class="tab-synt"><code> [[The lefty bracket '\[']] </code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>\]</code></td>
+                                             <td class="tab-name"> Right Bracket </td>
+                                             <td class="tab-synt"><code> [[The righty bracket '\]']] </code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>\\</code></td>
+                                             <td class="tab-name"> Backslash </td>
+                                             <td class="tab-synt"><code> 'The Array\\Dictionary' </code></td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                         <h3> Numbers </h3>
+                              <p>
+                                   Numbers is quantity or amount of value they can negative or positive value. Numbers can be represented as an Int or Float. 
+                                   Int is a type of Number that doesn't support decimal-point. Float on the other hand supports the decimal-point.
+                              </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">num1</span> <span class="code-operator1">=</span> <span class="code-number">1</span> <span class="code-comment">-- Int</span>
+     <span class="code-keyword1">local</span> <span class="code-variable">num2</span> <span class="code-operator1">=</span> <span class="code-number">2.12</span> <span class="code-comment">-- Float</span>
+
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">num1</span>)
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">num2</span>)
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                         <h3> Booleans </h3>
+                              <p> Booleans are simple there are two values which it can be represented as <code>true</code> or <code>false</code>. You can use Booleans to check if the condition is <code>true</code> or not. </p>
+                         <h3> Nil </h3>
+                              <p> Nil data type represents nothingness or nonexistent. You can use this for checking if the value is <code>nil</code> with control structures or destroying a data type inside of a variable. </p>
+                         <h3> Arrays </h3>
+                              <p> Tables are used to store multiple or different data types, Tables are always constructed with curly braces <code>{}</code>. You make Tables act like an Array or Dictionary. </p>
+                              <p>
+                                   Array are sorted in a list of values there are each separated with commas <code>,</code>. To read an Array add a pair of brackets <code>[]</code> next to the Variable name and the position number inside of the brackets <code>[]</code>. 
+                                   Unlike every programming language that starts with <code>0</code> Lua starts with <code>1</code>.
+                              </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">a</span> <span class="code-operator1">=</span> {<span class="code-string">'string1'</span>, <span class="code-keyword2">true</span>, <span class="code-keyword2">nil</span>}
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">a</span>[<span class="code-number">1</span>]) <span class="code-comment">-- will print 'string1'</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                              <p>
+                                   Dictionary are sorted in a key and value list. To create a Dictionary type the key followed by a equal character <code>=</code> and a value each separated with commas <code>,</code>. 
+                                   There are two different ways to read a Dictionary either add a dot character <code>.</code> followed by the name of key next to the Variable name. 
+                                   Or a brackets with single/double quotes <code>['']</code>/<code>[""]</code> followed by the name of key inside of it.
+                              </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">d</span> <span class="code-operator1">=</span> {<span class="code-key">a</span> <span class="code-operator1">=</span> <span class="code-string">'guh'</span>, <span class="code-key">b</span> <span class="code-operator1">=</span> <span class="code-keyword2">false</span>, <span class="code-key">c</span> <span class="code-operator1">=</span> <span class="code-number">34.69</span>}
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">d</span>.<span class="code-variable">a</span>) <span class="code-comment">-- will print 'guh' (first method) [recommended]</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">d</span>.[<span class="code-string">'c'</span>]) <span class="code-comment">-- will print '34.69' (second method)</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Function </h1>
+                    <section>
+                         <p>
+                              A Function is a collection of code that performs a specific task. To create your custom Function type the <code>function</code> 
+                              keyword followed by the name of the function, Example: <code>myFunc()</code>. And to declare your custom Function just type the name of the custom function, example shown below.
+                         </p>
+                         <p>
+                              If you want add more functionality to the function. You can add parameters, parameter are a special type of variable passed inside of the function. 
+                              If called outside of the function it will cause an error or a <code>nil</code> value.
+                         </p>
+                         <p> Example: </p>
+                         <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreatePost</span>()
+     <span class="code-customfunc">setPos</span>(<span class="code-string">'boyfriend'</span>, {<span class="code-number">100</span>, <span class="code-number">500</span>}) <span class="code-comment">-- Changes the position to x = 100 and y = 500</span>
+<span class="code-keyword1">end</span>
+
+<span class="code-comment">-- function created by Mayo78</span>
+<span class="code-keyword1">function</span> <span class="code-function">setPos</span>(<span class="code-parameter">obj</span>, <span class="code-parameter">pos</span>) <span class="code-comment">-- Concatenates setProperty x and y</span>
+     <span class="code-keyword1">if</span> <span class="code-parameter">pos</span>[<span class="code-number">1</span>] <span class="code-operator1">~=</span> <span class="code-keyword2">nil</span> <span class="code-keyword1">then</span>
+          <span class="code-customfunc">setProperty</span>(<span class="code-parameter">obj</span><span class="code-operator1">..</span><span class="code-string">'.x'</span>, <span class="code-parameter">pos</span>[<span class="code-number">1</span>])
+     <span class="code-keyword1">end</span>
+     <span class="code-keyword1">if</span> <span class="code-parameter">pos</span>[<span class="code-number">2</span>] <span class="code-operator1">~=</span> <span class="code-keyword2">nil</span> <span class="code-keyword1">then</span>
+          <span class="code-customfunc">setProperty</span>(<span class="code-parameter">obj</span><span class="code-operator1">..</span><span class="code-string">'.y'</span>, <span class="code-parameter">pos</span>[<span class="code-number">2</span>]) 
+     <span class="code-keyword1">end</span>
+<span class="code-keyword1">end</span>
+</pre>
+                         </div>
+                         <p>
+                              You can put a function on a variable but don't put the name of the function only <code>function()</code>. And accessing it, put the 
+                              variable name with a parentheses <code>()</code>, same works with Tables, Example: <code>funcname = function(para1, para2)</code>.
+                         </p>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Scope </h1>
+                    <section>
+                         <p> Scope is a section of code that has access to a Variable or Function. The scope may be Global or Local, but the default is a Global scope. </p>
+                         <ul>
+                              <li>
+                                   <code>Global scope</code> - Global scope are the defualt scope when creating a Variable or Function. 
+                                   The Global scope makes it accessible in every line of code. But it's more slower than the Local scope.
+                              </li>
+                              <li>
+                                   <code>Local scope</code> Local scope are declared with a <code>local</code> keyword after the declaration of the Variable or Function. 
+                                   It makes it only accessible inside of the block. If called outside of the block then it will be a <code>nil</code> value.
+                              </li>
+                         </ul>
+                         <p> Example: </p>
+                         <div class="code-border">
+<pre>
+<span class="code-variable">fish</span> <span class="code-operator1">=</span> <span class="code-string">'love'</span> <span class="code-comment">-- global</span>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">fish</span> <span class="code-operator1">=</span> <span class="code-string">'hate'</span> <span class="code-comment">-- keyword local is used</span>
+     <span class="code-keyword1">local</span> <span class="code-variable">thing</span> <span class="code-operator1">=</span> <span class="code-string">'thing'</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">fish</span>) <span class="code-comment">-- will print 'hate'</span>
+<span class="code-keyword1">end</span>
+
+<span class="code-keyword1">function</span> <span class="code-function">onCreatePost</span>()
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">thing</span>) <span class="code-comment">-- won't print anything (nil)</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">fish</span>) <span class="code-comment">-- will print 'love'</span>
+<span class="code-keyword1">end</span>
+</pre>
+                         </div>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Comments </h1>
+                    <section>
+                         <p> 
+                              Comments are used to explain the code and how they work. They can't interact the code and won't cause an error. 
+                              You can use these for disabling code if you're not inteded to use them. Example shown on other examples.
+                         </p>
+                         <ul>
+                              <li>
+                                   <code>--</code> - A single comment.
+                              </li>
+                              <li>
+                                   <code>--[[]]</code> - A multi comment.
+                              </li>
+                         </ul>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Operators </h1>
+                    <section>
+                         <p> 
+                              Operators are unique symbols that are used to carry out operations on operands. They can be represented
+                              as Arithmetic, Relational, Logical, and Miscellaneous.
+                         </p>
+                         <h3> Arithmetic </h3>
+                              <p> 
+                                   Arithmetic operators are mathematical symbols used for performing calculations on Number values. Also
+                                   the <code>x</code> variable is <code>5</code> and <code>y</code> variable is <code>3</code>.
+                              </p>
+                              <table id="Arith">
+                                   <thead>
+                                        <tr>
+                                             <td class="tab-symb"> Operator </td>
+                                             <td class="tab-name"> Description </td>
+                                             <td class="tab-synt"> Syntax </td>
+                                             <td class="tab-resu"> Result </td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>+</code></td>
+                                             <td class="tab-name"> Addition </td>
+                                             <td class="tab-synt"><code>x + y</code></td>
+                                             <td class="tab-resu"><code>8</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>-</code></td>
+                                             <td class="tab-name"> Subtraction </td>
+                                             <td class="tab-synt"><code>x - y</code></td>
+                                             <td class="tab-resu"><code>2</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>*</code></td>
+                                             <td class="tab-name"> Multiplication </td>
+                                             <td class="tab-synt"><code>x * y</code></td>
+                                             <td class="tab-resu"><code>15</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>/</code></td>
+                                             <td class="tab-name"> Division </td>
+                                             <td class="tab-synt"><code>x / y</code></td>
+                                             <td class="tab-resu"><code>1.66</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>^</code></td>
+                                             <td class="tab-name"> Exponent / To the power to </td>
+                                             <td class="tab-synt"><code>x^y</code></td>
+                                             <td class="tab-resu"><code>125</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>-</code></td>
+                                             <td class="tab-name"> Unary Negation </td>
+                                             <td class="tab-synt"><code>-x</code></td>
+                                             <td class="tab-resu"><code>-5</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>%</code></td>
+                                             <td class="tab-name"><a href="https://www.calculatorsoup.com/calculators/math/modulo-calculator.php">Modulus</a> </td>
+                                             <td class="tab-synt"><code>x % y</code></td>
+                                             <td class="tab-resu"><code>3</code></td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                         <h3> Relational </h3>
+                              <p> Relational operators checks if the two operands are <code>true</code> or not there usually placed between them. </p>
+                              <table id="Relat">
+                                   <thead>
+                                        <tr>
+                                             <td class="tab-symb"> Operator </td>
+                                             <td class="tab-name"> Description </td>
+                                             <td class="tab-synt"> Syntax </td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>==</code></td>
+                                             <td class="tab-name"><b> Equal to:</b> Checks if the condition is equal to the right. </td>
+                                             <td class="tab-synt"><code>a == b</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>~=</code></td>
+                                             <td class="tab-name"><b> Not equal to: </b> Checks if the condition is not equal to the right. </td>
+                                             <td class="tab-synt"><code>a ~= b</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>&#62;</code></td>
+                                             <td class="tab-name"><b> Greater than: </b> Checks if the condition is greater than the right. </td>
+                                             <td class="tab-synt"><code>a &#62; b</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>&#60;</code></td>
+                                             <td class="tab-name"><b> Lesser than: </b> Checks if the condition is lesser than the right. </td>
+                                             <td class="tab-synt"><code>a &#60; b</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>&#62;=</code></td>
+                                             <td class="tab-name"><b> Greater than or equal to: </b> Checks if the condition is greater or equal to the right. </td>
+                                             <td class="tab-synt"><code>a &#62;= b</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>&#60;=</code></td>
+                                             <td class="tab-name"><b> Lesser than or equal to: </b> Checks if the condition is lesser or equal to the right. </td>
+                                             <td class="tab-synt"><code>a &#60;= b</code></td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                         <h3> Logical </h3>
+                         <p> Logical operators are special types of words that perform logical operations in the Control Structure conditions. </p>
+                              <table id="Logic">
+                                   <thead>
+                                        <tr>
+                                             <td class="tab-symb"> Operator </td>
+                                             <td class="tab-name"> Description </td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>and</code></td>
+                                             <td class="tab-name"> Combines two conditions together; will return <code>true</code> if BOTH sides are <code>true</code>. </td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>or</code></td>
+                                             <td class="tab-name"> Combines two conditions together; will return <code>true</code> if EITHER left or right are <code>true</code>. </td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>not</code></td>
+                                             <td class="tab-name"> Reverses the condition; if it is equivalent to <code>false</code>, then the not operator will set it to <code>true</code>, and vice versa. </td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">a</span>, <span class="code-variable">b</span>, <span class="code-variable">c</span> <span class="code-keyword1">=</span> <span class="code-number">5</span>, <span class="code-number">6</span>, <span class="code-keyword2">true</span>
+
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">a</span> <span class="code-keyword1">==</span> <span class="code-number">5</span> <span class="code-operator2">and</span> <span class="code-variable">b</span> <span class="code-keyword1">==</span> <span class="code-number">6</span>)
+     <span class="code-comment">-- will print 'true' becuase a and b are equal to the second operand</span>
+
+     <span class="code-customfunc">debugPrint</span>(<span class="code-variable">a</span> <span class="code-keyword1">==</span> <span class="code-number">5</span> <span class="code-operator2">or</span> <span class="code-variable">b</span> <span class="code-keyword1">==</span> <span class="code-number">3</span>)
+     <span class="code-comment">-- will print 'true' because a is qeual to 5</span>
+
+     <span class="code-customfunc">debugPrint</span>(<span class="code-operator2">not</span> <span class="code-variable">c</span>) 
+     <span class="code-comment">-- will print 'false' becuase it reverses the expression or condition</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                         <h3> Miscellaneous </h3>
+                              <p> Miscellaneous operators are supported in Lua the only operators featured here are Concatenation and Length operators. </p>
+                              <table id="Misce">
+                                   <thead>
+                                        <tr>
+                                             <td class="tab-symb"> Operator </td>
+                                             <td class="tab-name"> Description </td>
+                                             <td class="tab-synt"> Syntax </td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>..</code></td>
+                                             <td class="tab-name"><b> Concatenate: </b> Connects two or more Strings. </td>
+                                             <td class="tab-synt"><code>x..y</code></td>
+                                        </tr>
+                                        <tr><td><div class="fake-hr-tab"></div></td></tr>
+                                        <tr>
+                                             <td class="tab-symb"><code>#</code></td>
+                                             <td class="tab-name"><b> Length: </b> Returns the length of a Table or String. </td>
+                                             <td class="tab-synt"><code>#x</code></td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-customfunc">debugPrint</span>(<span class="code-string">'snow'</span><span class="code-operator1">..</span><span class="code-string">'ball'</span>) <span class="code-comment">-- will print 'snowball'</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-number">1</span> <span class="code-operator1">..</span> <span class="code-number">2</span>) <span class="code-comment">-- will print '12' [NOTE: this will be a string] </span>
+
+     <span class="code-keyword1">local</span> <span class="code-variable">tab</span> <span class="code-keyword1">=</span> {<span class="code-string">'Psych'</span>, <span class="code-string">'Wiki'</span>, <span class="code-string">'Site'</span>}
+     <span class="code-keyword1">local</span> <span class="code-variable">str</span> <span class="code-keyword1">=</span> <span class="code-variable">tab</span>[<span class="code-number">1</span>]<span class="code-operator1">..</span><span class="code-variable">tab</span>[<span class="code-number">2</span>] <span class="code-comment">-- will concatenate into 'PsychSite'</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-keyword1">#</span><span class="code-variable">tab</span>) <span class="code-comment">-- will print 3 [NOTE: Counts only the values]</span>
+     <span class="code-customfunc">debugPrint</span>(<span class="code-keyword1">#</span><span class="code-variable">str</span>) <span class="code-comment">-- will print 9 [NOTE: Counts only the letters]</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                    </section>
+               <div class="fake-hr-thick"></div>
+               <h1> Control Structures </h1>
+                    <section>
+                         <p> Control Structures are a block code which analyzes values and decide where to execute or not. </p>
+                         <p> Also am only going to mention <code>for</code> loop and not <code>while</code>, <code>repeat</code>. Because there are rarely used in scripts but they do work tho. </p>
+                         <h3> If/Else/Else-If Statement </h3>
+                              <p> These are typical basic statements that check to see if the condition is <code>true</code> before running the code. </p>
+                              <p>
+                                   The <code>if</code> statement is simple, checks if the condition is <code>true</code> before executing the code. You can add a <code>elseif</code> statement 
+                                   as an optional statement inside of the <code>if</code> statement. You can use this as an alternate condition if the <code>if</code> statement returns to <code>false</code>.
+                              </p>
+                              <p> Another optional statement you can add is <code>else</code> statement if the <code>if</code> or <code>elseif</code> statements return <code>false</code> then this statement will be called. </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-customfunc">makeLuaText</span>(<span class="code-string">'textTag'</span>, <span class="code-string">' '</span>, <span class="code-keyword2">nil</span>, <span class="code-number">0</span>, <span class="code-number">0</span>)
+     <span class="code-customfunc">addLuaText</span>(<span class="code-string">'textTag'</span>, <span class="code-keyword2">true</span>)
+<span class="code-keyword1">end</span>
+
+<span class="code-keyword1">function</span> <span class="code-function">onUpdate</span>()
+     <span class="code-keyword1">local</span> <span class="code-variable">health</span> <span class="code-operator1">=</span> <span class="code-customfunc">getProperty</span>(<span class="code-string">'health'</span>) <span class="code-comment">-- gets the current health</span>
+     <span class="code-keyword1">if</span> <span class="code-number">2</span> <span class="code-operator1">&#60;=</span> <span class="code-variable">health</span> <span class="code-keyword1">then</span> <span class="code-comment">-- if above or equal than 2</span>
+          <span class="code-customfunc">setTextString</span>(<span class="code-string">'textTag'</span>, <span class="code-variable">health</span><span class="code-operator1">..</span><span class="code-string">' is Full'</span>)
+     <span class="code-keyword1">elseif</span> <span class="code-number">1</span> <span class="code-operator1">&#60;=</span> <span class="code-variable">health</span> <span class="code-keyword1">then</span> <span class="code-comment">-- if above or equal than 1</span>
+          <span class="code-customfunc">setTextString</span>(<span class="code-string">'textTag'</span>, <span class="code-variable">health</span><span class="code-operator1">..</span><span class="code-string">' is Mid Full'</span>)
+     <span class="code-keyword1">else</span> <span class="code-comment">-- lesser than 1</span>
+          <span class="code-customfunc">setTextString</span>(<span class="code-string">'textTag'</span>, <span class="code-variable">health</span><span class="code-operator1">..</span><span class="code-string">' is Low'</span>)
+     <span class="code-keyword1">end</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                         <h3> For Loop </h3>
+                              <p>
+                                   The <code>for</code> loop allows you to loop the number of times to execute the loop. Either a you can do a numeric value or Table values. 
+                                   This loop is generally used in <code>setPropertyFromGroup()</code> and <code>getPropertyFromGroup()</code> functions for note 
+                                   manipulation or other stuff. The <code>for</code> loop can be either a Numeric Loop or Generic Loop.
+                              </p>
+                              <p> Numeric Loop is the default loop for the <code>for</code> loop. The loop is declared with the <code>index1</code>, <code>index2</code>, and an optional <code>increment</code> value. </p>
+                              <ul>
+                                   <li>
+                                        <code>index1</code> - The starting index value of the loop, Default value: <code>1</code>.
+                                   </li>
+                                   <li>
+                                        <code>index2</code> - The ending index value of the loop.
+                                   </li>
+                                   <li>
+                                        <code>increment</code> - Whether of not will be negative or positive value.
+                                   </li>
+                              </ul>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">for</span> <span class="code-variable">i</span> <span class="code-operator1">=</span> <span class="code-number">10</span>, <span class="code-number">0</span>, <span class="code-operator1">-</span><span class="code-number">1</span> <span class="code-keyword1">do</span> <span class="code-comment">-- The negative increment</span>
+          <span class="code-customfunc">debugPrint</span>(<span class="code-variable">i</span>) <span class="code-comment">-- this will countdown to 10 to 0</span>
+     <span class="code-keyword1">end</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                              <p>
+                                   Generic Loop does not iterate over a series of numbers; rather, it iterates over items in a collection. The <code>in</code> keyword 
+                                   is used by the loop to iterate through a sequence. From the <code>pairs()</code> or <code>ipairs()</code> functions of the loop for more information 
+                                   check the Lua Built-in Functions section.
+                              </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-variable">fruits</span> <span class="code-operator1">=</span> {<span class="code-string">'banana'</span>, <span class="code-string">'orange'</span>, <span class="code-string">'apple'</span>, <span class="code-string">'grape'</span>} <span class="code-comment">-- a table</span>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">for</span> <span class="code-variable">i</span>,<span class="code-variable">v</span> <span class="code-keyword1">in</span> <span class="code-customfunc">ipairs</span>(<span class="code-variable">fruits</span>) <span class="code-keyword1">do</span> <span class="code-comment">-- gets the key and value inside of the table</span>
+          <span class="code-customfunc">debugPrint</span>(<span class="code-variable">i</span>, <span class="code-variable">v</span>) <span class="code-comment">-- prints every key and value in the table</span>
+     <span class="code-keyword1">end</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                         <h3> Return </h3>
+                              <p> The <code>return</code> statement ends the currently execution of a code and returns the result of code. If there is any code below the <code>return</code> statement it will cause an error. </p>
+                              <p> Example: </p>
+                              <div class="code-border"> 
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreatePost</span>()
+     <span class="code-customfunc">debugPrint</span>(<span class="code-customfunc">mathMulti</span>(<span class="code-number">4</span>, <span class="code-number">5</span>)) <span class="code-comment">-- will print '9'</span>
+<span class="code-keyword1">end</span>
+
+<span class="code-keyword1">function</span> <span class="code-function">mathMulti</span>(<span class="code-parameter">x</span>, <span class="code-parameter">y</span>)
+     <span class="code-keyword1">return</span> <span class="code-parameter">x</span> <span class="code-operator1">*</span> <span class="code-parameter">y</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                         <h3> Break </h3>
+                              <p> The <code>break</code> statement ends the loop immediately when the condition is met. </p>
+                              <p> Example: </p>
+                              <div class="code-border">
+<pre>
+<span class="code-keyword1">function</span> <span class="code-function">onCreate</span>()
+     <span class="code-keyword1">for</span> <span class="code-variable">i</span> <span class="code-operator1">=</span> <span class="code-number">1</span>, <span class="code-number">50</span> <span class="code-keyword1">do</span> <span class="code-comment">-- 1 to 50</span>
+          <span class="code-customfunc">debugPrint</span>(<span class="code-variable">i</span>)
+          <span class="code-keyword1">if</span> <span class="code-variable">i</span> <span class="code-operator1">==</span> <span class="code-number">25</span> <span class="code-keyword1">then</span>
+               <span class="code-keyword1">break</span> <span class="code-comment">-- ends the loop</span>
+          <span class="code-keyword1">end</span>
+     <span class="code-keyword1">end</span>
+<span class="code-keyword1">end</span>
+</pre>
+                              </div>
+                    </section>
+          </main>
+     </body>
+</html>

@@ -1,0 +1,6 @@
+{
+     "GlobalLighty": ["black", "white"],
+     "metaTheme": "dark",
+     "settingBG": "rgb(36, 36, 36)",
+     "optionBordVal": ["grey solid 1px", "green solid 1.5px", "grey solid 1px"]
+}
